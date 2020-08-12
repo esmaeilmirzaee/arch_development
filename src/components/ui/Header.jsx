@@ -53,7 +53,11 @@ export default function Header(props) {
               <Tab label='Home' />
               <Tab label='Training' />
               <Tab label='About Me' />
-              <Tab icon={<PhoneIcon />} aria-label='contact me' />
+              <Tab
+                icon={<PhoneIcon />}
+                label='Contact Me'
+                aria-label='contact me'
+              />
             </Tabs>
           </Toolbar>
         </AppBar>
