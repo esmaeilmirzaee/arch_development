@@ -2,7 +2,7 @@
   "name": "arch_development",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://esmaeilmirzaee.github.io/training",
+  "homepage": "https://esmaeilmirzaee.github.io/arch_development",
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/styles": "^4.10.0",
