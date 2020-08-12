@@ -90,7 +90,7 @@ export default function Header(props) {
                 label='Home'
                 aria-label='home'
                 component={Link}
-                to='/home'
+                to='/'
               />
               <Tab
                 className={classes.tab}
