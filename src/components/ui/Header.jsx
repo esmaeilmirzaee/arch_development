@@ -45,14 +45,12 @@ const useStyle = makeStyles((theme) => ({
   },
   tabsContainer: {
     marginLeft: 'auto',
-    textColor: 'white',
   },
   tab: {
     ...theme.typography.tab,
     color: 'white',
     minWidth: 10,
     marginLeft: '1.5rem',
-    textColor: 'white',
   },
   button: {
     color: '#fdfdfd',
@@ -62,7 +60,7 @@ const useStyle = makeStyles((theme) => ({
 
 export default function Header(props) {
   const classes = useStyle();
-  const currentTheme = true;
+  const currentTheme = false;
   return (
     <>
       <ElevationScroll>
