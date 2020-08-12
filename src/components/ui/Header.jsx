@@ -51,6 +51,9 @@ const useStyle = makeStyles((theme) => ({
     minWidth: 10,
     marginLeft: '1.5rem',
   },
+  button: {
+    marginButtom: '2rem',
+  },
 }));
 
 export default function Header(props) {
@@ -91,7 +94,7 @@ export default function Header(props) {
                 aria-label='contact me'
               />
             </Tabs>
-            <Button>
+            <Button className={classes.button}>
               {currentTheme ? <BrightnessDark /> : <BrightnessLight />}
             </Button>
           </Toolbar>
