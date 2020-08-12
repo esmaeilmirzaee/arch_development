@@ -48,11 +48,12 @@ const useStyle = makeStyles((theme) => ({
   },
   tab: {
     ...theme.typography.tab,
+    color: 'white',
     minWidth: 10,
     marginLeft: '1.5rem',
   },
   button: {
-    marginButtom: '2rem',
+    marginBottom: '2rem',
   },
 }));
 
