@@ -22,7 +22,7 @@ export default createMuiTheme({
       main: `${lightCream}`,
     },
     text: {
-      primary: '#ffffff',
+      primary: '#fff',
     },
     background: {
       paper: '#fafafa',
@@ -36,5 +36,11 @@ export default createMuiTheme({
     fontWeightRegular: 300,
     fontWeightMedium: 400,
     fontWeightBold: 600,
+  },
+  tab: {
+    color: '#fff',
+    fontFamily: 'Playfair Display',
+    fontWeight: 700,
+    fontSize: '1rem',
   },
 });
