@@ -5,6 +5,8 @@ import Typography from '@material-ui/core/Typography';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { makeStyles } from '@material-ui/styles';
 
+import logo from '../../assets/img/logo_0_2.svg';
+
 function ElevationScroll(props) {
   const { children, window } = props;
 
@@ -22,6 +24,7 @@ const useStyle = makeStyles((theme) => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
   },
+  logo: {},
 }));
 
 export default function Header(props) {
@@ -31,7 +34,8 @@ export default function Header(props) {
       <ElevationScroll>
         <AppBar position='fixed'>
           <Toolbar>
-            <Typography>ArchDevelopment</Typography>
+            <img src={logo} alt="Company's logo" className={classes.logo} />
+            <Typography>The Beaver</Typography>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
