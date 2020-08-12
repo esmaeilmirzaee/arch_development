@@ -25,7 +25,7 @@ const useStyle = makeStyles((theme) => ({
     ...theme.mixins.toolbar,
   },
   logo: {
-    height: '3em',
+    height: '7em',
   },
 }));
 
