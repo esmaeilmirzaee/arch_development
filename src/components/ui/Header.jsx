@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { makeStyles } from '@material-ui/styles';
 
-import logo from '../../assets/img/logo_0_2_full.svg';
+import logo from '../../assets/img/logo_0_2.svg';
 
 import { Tabs, Tab } from '@material-ui/core';
 import WorkIcon from '@material-ui/icons/Work';
@@ -16,6 +16,8 @@ import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
 import BrightnessLight from '@material-ui/icons/BrightnessMedium';
 import BrightnessDark from '@material-ui/icons/Brightness7';
+
+import { Link } from 'react-router-dom';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -72,9 +74,9 @@ export default function Header(props) {
         <AppBar position='fixed'>
           <Toolbar disableGutters>
             <img src={logo} alt="Company's logo" className={classes.logo} />
-            {/* <Typography variant='h5' className={classes.logoTitle}> */}
-            {/* The Beaver */}
-            {/* </Typography> */}
+            <Typography variant='h5' className={classes.logoTitle}>
+              The Beaver
+            </Typography>
             <Tabs
               className={classes.tabsContainer}
               textColor='secondary'
@@ -87,24 +89,32 @@ export default function Header(props) {
                 color={'#fff'}
                 label='Home'
                 aria-label='home'
+                component={Link}
+                to='/home'
               />
               <Tab
                 className={classes.tab}
                 // icon={<SchoolIcon />}
                 label='Training'
                 aria-label='training'
+                component={Link}
+                to='/training'
               />
               <Tab
                 className={classes.tab}
                 // icon={<WorkIcon />}
                 label='About Me'
                 aria-label='resume'
+                component={Link}
+                to='/about'
               />
               <Tab
                 className={classes.tab}
                 // icon={<ContactsIcon />}
                 label='Contact Me'
                 aria-label='contact me'
+                component={Link}
+                to='/contact'
               />
             </Tabs>
             <Button className={classes.button}>
