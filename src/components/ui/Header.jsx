@@ -13,6 +13,9 @@ import SchoolIcon from '@material-ui/icons/School';
 import ContactsIcon from '@material-ui/icons/Contacts';
 import HomeIcon from '@material-ui/icons/Home';
 
+import Button from '@material-ui/core/Button';
+import BrightnessMedium from '@material-ui/icons/BrightnessMedium';
+
 function ElevationScroll(props) {
   const { children, window } = props;
 
@@ -43,10 +46,7 @@ const useStyle = makeStyles((theme) => ({
     marginLeft: 'auto',
   },
   tab: {
-    color: 'rgb(255, 255, 255)',
-    fontFamily: 'Playfair Display',
-    fontWeight: 400,
-    fontSize: '1rem',
+    ...theme.typography.tab,
     minWidth: 10,
     marginLeft: '1.5rem',
   },
@@ -89,6 +89,7 @@ export default function Header(props) {
                 aria-label='contact me'
               />
             </Tabs>
+            <Button>{<BrightnessMedium />}</Button>
           </Toolbar>
         </AppBar>
       </ElevationScroll>

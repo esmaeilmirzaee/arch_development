@@ -40,7 +40,7 @@ export default createMuiTheme({
   tab: {
     color: '#fff',
     fontFamily: 'Playfair Display',
-    fontWeight: 700,
-    fontSize: '1rem',
+    fontWeight: 500,
+    fontSize: '0.75rem',
   },
 });
