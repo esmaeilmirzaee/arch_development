@@ -21,6 +21,12 @@ export default createMuiTheme({
     secondary: {
       main: `${lightCream}`,
     },
+    text: {
+      main: `${silver}`,
+    },
+    background: {
+      default: `${lightCream}`,
+    },
   },
   typography: {
     htmlFontSize: 16,
