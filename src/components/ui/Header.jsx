@@ -45,6 +45,7 @@ const useStyle = makeStyles((theme) => ({
   },
   tabsContainer: {
     marginLeft: 'auto',
+    textColor: 'white',
   },
   tab: {
     ...theme.typography.tab,
