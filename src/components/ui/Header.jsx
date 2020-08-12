@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/styles';
 
 import logo from '../../assets/img/logo_0_2.svg';
 
-import { Tabs, Tab } from '@material-ui/styles';
+import { Tabs, Tab } from '@material-ui/core';
 
 function ElevationScroll(props) {
   const { children, window } = props;
