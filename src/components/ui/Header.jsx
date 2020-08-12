@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import { makeStyles } from '@material-ui/styles';
 
-import logo from '../../assets/img/logo_0_2.svg';
+import logo from '../../assets/img/logo_0_2_full.svg';
 
 import { Tabs, Tab } from '@material-ui/core';
 import WorkIcon from '@material-ui/icons/Work';
@@ -72,9 +72,9 @@ export default function Header(props) {
         <AppBar position='fixed'>
           <Toolbar disableGutters>
             <img src={logo} alt="Company's logo" className={classes.logo} />
-            <Typography variant='h5' className={classes.logoTitle}>
-              The Beaver
-            </Typography>
+            {/* <Typography variant='h5' className={classes.logoTitle}> */}
+            {/* The Beaver */}
+            {/* </Typography> */}
             <Tabs
               className={classes.tabsContainer}
               textColor='secondary'
