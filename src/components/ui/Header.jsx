@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -60,7 +60,12 @@ const useStyle = makeStyles((theme) => ({
 
 export default function Header(props) {
   const classes = useStyle();
+  const [value, setValue] = useState(0); // Active tab
   const currentTheme = false;
+
+  function handleActiveTab(value) {
+    setValue(value);
+  }
   return (
     <>
       <ElevationScroll>
@@ -70,7 +75,12 @@ export default function Header(props) {
             <Typography variant='h5' className={classes.logoTitle}>
               The Beaver
             </Typography>
-            <Tabs className={classes.tabsContainer} textColor='secondary'>
+            <Tabs
+              className={classes.tabsContainer}
+              textColor='secondary'
+              value={value}
+              onChange={handleActiveTab}
+            >
               <Tab
                 className={classes.tab}
                 // icon={<HomeIcon />}
