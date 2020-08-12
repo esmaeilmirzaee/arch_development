@@ -52,6 +52,7 @@ const useStyle = makeStyles((theme) => ({
     color: 'white',
     minWidth: 10,
     marginLeft: '1.5rem',
+    textColor: 'white',
   },
   button: {
     color: '#fdfdfd',
