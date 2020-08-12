@@ -25,6 +25,7 @@ export default createMuiTheme({
       primary: '#ffffff',
     },
     background: {
+      paper: '#fafafa',
       default: `${lightCream}`,
     },
   },
