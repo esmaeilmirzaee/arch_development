@@ -54,7 +54,7 @@ const useStyle = makeStyles((theme) => ({
   },
   button: {
     color: '#fdfdfd',
-    marginBottom: '2rem',
+    // marginBottom: '2rem',
   },
 }));
 
@@ -74,6 +74,7 @@ export default function Header(props) {
               <Tab
                 className={classes.tab}
                 // icon={<HomeIcon />}
+                style={(color = 'white')}
                 label='Home'
                 aria-label='home'
               />

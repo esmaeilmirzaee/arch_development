@@ -38,7 +38,6 @@ export default createMuiTheme({
     fontWeightBold: 600,
   },
   tab: {
-    color: '#fff',
     fontFamily: 'Playfair Display',
     fontWeight: 500,
     fontSize: '0.75rem',
