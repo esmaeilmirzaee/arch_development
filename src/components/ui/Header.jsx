@@ -53,7 +53,11 @@ export default function Header(props) {
               The Beaver
             </Typography>
             <Tabs>
-              <Tab icon={<HomeIcon />} label='Home' aria-label='home' />
+              <Tab
+                icon={<HomeIcon color='primary' />}
+                label='Home'
+                aria-label='home'
+              />
               <Tab
                 icon={<SchoolIcon />}
                 label='Training'
