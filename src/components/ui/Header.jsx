@@ -74,7 +74,7 @@ export default function Header(props) {
               <Tab
                 className={classes.tab}
                 // icon={<HomeIcon />}
-                color={text}
+                color={'#fff'}
                 label='Home'
                 aria-label='home'
               />
