@@ -42,6 +42,11 @@ const useStyle = makeStyles((theme) => ({
   tabsContainer: {
     marginLeft: 'auto',
   },
+  tab: {
+    color: '#ffffff',
+    fontFamily: 'Playfair Display',
+    fontWeight: '400',
+  },
 }));
 
 export default function Header(props) {
