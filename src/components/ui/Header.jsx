@@ -37,7 +37,7 @@ export default function Header(props) {
     <>
       <ElevationScroll>
         <AppBar position='fixed'>
-          <Toolbar>
+          <Toolbar disableGutters>
             <img src={logo} alt="Company's logo" className={classes.logo} />
             <Typography>The Beaver</Typography>
           </Toolbar>
