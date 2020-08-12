@@ -39,6 +39,9 @@ const useStyle = makeStyles((theme) => ({
     fontWeight: '400',
     fontStyle: 'italic',
   },
+  tabsContainer: {
+    marginLeft: 'auto',
+  },
 }));
 
 export default function Header(props) {
@@ -49,10 +52,10 @@ export default function Header(props) {
         <AppBar position='fixed'>
           <Toolbar disableGutters>
             <img src={logo} alt="Company's logo" className={classes.logo} />
-            <Typography variant='h3' className={classes.logoTitle}>
+            <Typography variant='h5' className={classes.logoTitle}>
               The Beaver
             </Typography>
-            <Tabs>
+            <Tabs className={classes.tabsContainer}>
               <Tab icon={<HomeIcon />} label='Home' aria-label='home' />
               <Tab
                 icon={<SchoolIcon />}

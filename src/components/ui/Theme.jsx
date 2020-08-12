@@ -22,7 +22,7 @@ export default createMuiTheme({
       main: `${lightCream}`,
     },
     text: {
-      main: `${silver}`,
+      main: '#ffffff',
     },
     background: {
       default: `${lightCream}`,
