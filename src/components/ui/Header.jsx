@@ -7,6 +7,8 @@ import { makeStyles } from '@material-ui/styles';
 
 import logo from '../../assets/img/logo_0_2.svg';
 
+import { Tabs, Tab } from '@material-ui/styles';
+
 function ElevationScroll(props) {
   const { children, window } = props;
 
@@ -43,10 +45,15 @@ export default function Header(props) {
         <AppBar position='fixed'>
           <Toolbar disableGutters>
             <img src={logo} alt="Company's logo" className={classes.logo} />
-            <Typography variant='h4' className={classes.logoTitle}>
+            <Typography variant='h3' className={classes.logoTitle}>
               The Beaver
             </Typography>
           </Toolbar>
+          <Tabs>
+            <Tab label='Home' />
+            <Tab label='Training' />
+            <Tab label='About Me' />
+          </Tabs>
         </AppBar>
       </ElevationScroll>
       <div className={classes.toolbarMargin} />
