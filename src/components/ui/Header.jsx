@@ -37,6 +37,9 @@ const useStyle = makeStyles((theme) => ({
     ...theme.mixins.toolbar,
     marginBotton: '6em',
   },
+  logoContainer: {
+    padding: 0,
+  },
   logo: {
     height: '3em',
     padding: '.5em',
@@ -60,6 +63,8 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
+// TODO: I didn't add useEffect to handle refresh page...
+
 export default function Header(props) {
   const classes = useStyle();
   const [value, setValue] = useState(0); // Active tab
@@ -68,15 +73,18 @@ export default function Header(props) {
   const handleActiveTab = (e, newValue) => {
     setValue(newValue);
   };
+
   return (
     <>
       <ElevationScroll>
         <AppBar position='fixed'>
           <Toolbar disableGutters>
-            <img src={logo} alt="Company's logo" className={classes.logo} />
-            <Typography variant='h5' className={classes.logoTitle}>
-              The Beaver
-            </Typography>
+            <Button className='logoContainer' disableRipple>
+              <img src={logo} alt="Company's logo" className={classes.logo} />
+              <Typography variant='h5' className={classes.logoTitle}>
+                The Beaver
+              </Typography>
+            </Button>
             <Tabs
               className={classes.tabsContainer}
               textColor='secondary'
