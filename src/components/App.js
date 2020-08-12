@@ -11,10 +11,10 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
-          <Route exact path='/training' component={<>training</>} />
-          <Route exact path='/about' component={<>about</>} />
-          <Route exact path='/contact' component={<>contact</>} />
-          <Route exact path='/' component={<>Home</>} />
+          <Route exact path='/training' component={() => <>training</>} />
+          <Route exact path='/about' component={() => <>about</>} />
+          <Route exact path='/contact' component={() => <>contact</>} />
+          <Route exact path='/' component={() => <>Home</>} />
         </Switch>
       </BrowserRouter>
     </ThemeProvider>
