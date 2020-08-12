@@ -54,7 +54,7 @@ export default function Header(props) {
             </Typography>
             <Tabs>
               <Tab
-                icon={<HomeIcon color='secondary' />}
+                icon={<HomeIcon color='#fefefe' />}
                 label='Home'
                 aria-label='home'
               />
