@@ -63,9 +63,9 @@ export default function Header(props) {
   const [value, setValue] = useState(0); // Active tab
   const currentTheme = false;
 
-  function handleActiveTab(value) {
-    setValue(value);
-  }
+  const handleActiveTab = (e, newValue) => {
+    setValue(newValue);
+  };
   return (
     <>
       <ElevationScroll>
