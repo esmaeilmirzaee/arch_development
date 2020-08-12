@@ -8,7 +8,10 @@ import { makeStyles } from '@material-ui/styles';
 import logo from '../../assets/img/logo_0_2.svg';
 
 import { Tabs, Tab } from '@material-ui/core';
-import PhoneIcon from '@material-ui/icons/Phone';
+import WorkIcon from '@material-ui/icons/Work';
+import SchoolIcon from '@material-ui/icons/School';
+import ContactsIcon from '@material-ui/icons/Contacts';
+import HomeIcon from '@material-ui/icons/Home';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -50,11 +53,15 @@ export default function Header(props) {
               The Beaver
             </Typography>
             <Tabs>
-              <Tab label='Home' />
-              <Tab label='Training' />
-              <Tab label='About Me' />
+              <Tab icon={<HomeIcon />} label='Home' aria-label='home' />
               <Tab
-                icon={<PhoneIcon />}
+                icon={<SchoolIcon />}
+                label='Training'
+                aria-label='training'
+              />
+              <Tab icon={<WorkIcon />} label='About Me' aria-label='resume' />
+              <Tab
+                icon={<ContactsIcon />}
                 label='Contact Me'
                 aria-label='contact me'
               />
