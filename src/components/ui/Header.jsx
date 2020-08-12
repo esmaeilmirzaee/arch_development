@@ -39,6 +39,9 @@ const useStyle = makeStyles((theme) => ({
   },
   logoContainer: {
     padding: 0,
+    '&:hover': {
+      backgroundColor: 'transparent',
+    },
   },
   logo: {
     height: '3em',
@@ -79,7 +82,12 @@ export default function Header(props) {
       <ElevationScroll>
         <AppBar position='fixed'>
           <Toolbar disableGutters>
-            <Button className='logoContainer' disableRipple>
+            <Button
+              className='logoContainer'
+              component={Link}
+              to='/'
+              disableRipple
+            >
               <img src={logo} alt="Company's logo" className={classes.logo} />
               <Typography variant='h5' className={classes.logoTitle}>
                 The Beaver
