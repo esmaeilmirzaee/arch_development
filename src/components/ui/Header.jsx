@@ -8,6 +8,7 @@ import { makeStyles } from '@material-ui/styles';
 import logo from '../../assets/img/logo_0_2.svg';
 
 import { Tabs, Tab } from '@material-ui/core';
+import { GrContact } from 'react-icons/gr';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -52,6 +53,7 @@ export default function Header(props) {
               <Tab label='Home' />
               <Tab label='Training' />
               <Tab label='About Me' />
+              <Tab icon={<GrContact />} aria-label='contact me' />
             </Tabs>
           </Toolbar>
         </AppBar>
