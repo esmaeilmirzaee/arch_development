@@ -30,7 +30,7 @@ const useStyle = makeStyles((theme) => ({
     padding: '.5em',
   },
   logoTitle: {
-    fontWeight: '500',
+    fontWeight: '400',
     fontStyle: 'italic',
   },
 }));
