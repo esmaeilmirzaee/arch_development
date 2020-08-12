@@ -43,10 +43,12 @@ const useStyle = makeStyles((theme) => ({
     marginLeft: 'auto',
   },
   tab: {
-    color: '#ffffff',
+    color: rgb(255, 255, 255),
     fontFamily: 'Playfair Display',
-    fontWeight: '400',
+    fontWeight: 400,
     fontSize: '1rem',
+    minWidth: 10,
+    marginLeft: '1.5rem',
   },
 }));
 
