@@ -27,7 +27,11 @@ const useStyle = makeStyles((theme) => ({
   },
   logo: {
     height: '5em',
-    padding: '.75em',
+    padding: '.5em',
+  },
+  logoTitle: {
+    fontWeight: '500',
+    fontStyle: 'italic',
   },
 }));
 
@@ -39,7 +43,9 @@ export default function Header(props) {
         <AppBar position='fixed'>
           <Toolbar disableGutters>
             <img src={logo} alt="Company's logo" className={classes.logo} />
-            <Typography variant='h4'>The Beaver</Typography>
+            <Typography variant='h4' className={classes.logoTitle}>
+              The Beaver
+            </Typography>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
