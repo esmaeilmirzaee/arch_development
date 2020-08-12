@@ -26,7 +26,7 @@ const useStyle = makeStyles((theme) => ({
     marginBotton: '6em',
   },
   logo: {
-    height: '5em',
+    height: '3em',
     padding: '.5em',
   },
   logoTitle: {
