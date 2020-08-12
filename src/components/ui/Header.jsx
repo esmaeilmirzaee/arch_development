@@ -14,7 +14,8 @@ import ContactsIcon from '@material-ui/icons/Contacts';
 import HomeIcon from '@material-ui/icons/Home';
 
 import Button from '@material-ui/core/Button';
-import BrightnessMedium from '@material-ui/icons/BrightnessMedium';
+import BrightnessLight from '@material-ui/icons/BrightnessMedium';
+import BrightnessDark from '@material-ui/icons/Brightness7';
 
 function ElevationScroll(props) {
   const { children, window } = props;
@@ -54,6 +55,7 @@ const useStyle = makeStyles((theme) => ({
 
 export default function Header(props) {
   const classes = useStyle();
+  const currentTheme = true;
   return (
     <>
       <ElevationScroll>
@@ -89,7 +91,9 @@ export default function Header(props) {
                 aria-label='contact me'
               />
             </Tabs>
-            <Button>{<BrightnessMedium />}</Button>
+            <Button>
+              {currentTheme ? <BrightnessDark /> : <BrightnessLight />}
+            </Button>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
