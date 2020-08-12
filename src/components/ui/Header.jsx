@@ -72,7 +72,7 @@ export default function Header(props) {
             <Typography variant='h5' className={classes.logoTitle}>
               The Beaver
             </Typography>
-            <Tabs className={classes.tabsContainer}>
+            <Tabs className={classes.tabsContainer} textColor='white'>
               <Tab
                 className={classes.tab}
                 // icon={<HomeIcon />}
