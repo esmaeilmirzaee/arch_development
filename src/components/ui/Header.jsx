@@ -53,6 +53,7 @@ const useStyle = makeStyles((theme) => ({
     marginLeft: '1.5rem',
   },
   button: {
+    color: '#fdfdfd',
     marginBottom: '2rem',
   },
 }));
@@ -72,25 +73,25 @@ export default function Header(props) {
             <Tabs className={classes.tabsContainer}>
               <Tab
                 className={classes.tab}
-                icon={<HomeIcon />}
+                // icon={<HomeIcon />}
                 label='Home'
                 aria-label='home'
               />
               <Tab
                 className={classes.tab}
-                icon={<SchoolIcon />}
+                // icon={<SchoolIcon />}
                 label='Training'
                 aria-label='training'
               />
               <Tab
                 className={classes.tab}
-                icon={<WorkIcon />}
+                // icon={<WorkIcon />}
                 label='About Me'
                 aria-label='resume'
               />
               <Tab
                 className={classes.tab}
-                icon={<ContactsIcon />}
+                // icon={<ContactsIcon />}
                 label='Contact Me'
                 aria-label='contact me'
               />
