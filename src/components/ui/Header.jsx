@@ -46,6 +46,7 @@ const useStyle = makeStyles((theme) => ({
     color: '#ffffff',
     fontFamily: 'Playfair Display',
     fontWeight: '400',
+    fontSize: '1rem',
   },
 }));
 
@@ -61,14 +62,26 @@ export default function Header(props) {
               The Beaver
             </Typography>
             <Tabs className={classes.tabsContainer}>
-              <Tab icon={<HomeIcon />} label='Home' aria-label='home' />
               <Tab
+                className={classes.tab}
+                icon={<HomeIcon />}
+                label='Home'
+                aria-label='home'
+              />
+              <Tab
+                className={classes.tab}
                 icon={<SchoolIcon />}
                 label='Training'
                 aria-label='training'
               />
-              <Tab icon={<WorkIcon />} label='About Me' aria-label='resume' />
               <Tab
+                className={classes.tab}
+                icon={<WorkIcon />}
+                label='About Me'
+                aria-label='resume'
+              />
+              <Tab
+                className={classes.tab}
                 icon={<ContactsIcon />}
                 label='Contact Me'
                 aria-label='contact me'
