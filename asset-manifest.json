@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.js": "/arch_development/static/js/main.65442af6.chunk.js",
-    "main.js.map": "/arch_development/static/js/main.65442af6.chunk.js.map",
+    "main.js": "/arch_development/static/js/main.1fa19f2a.chunk.js",
+    "main.js.map": "/arch_development/static/js/main.1fa19f2a.chunk.js.map",
     "runtime-main.js": "/arch_development/static/js/runtime-main.46d9e632.js",
     "runtime-main.js.map": "/arch_development/static/js/runtime-main.46d9e632.js.map",
-    "static/js/2.952ddcad.chunk.js": "/arch_development/static/js/2.952ddcad.chunk.js",
-    "static/js/2.952ddcad.chunk.js.map": "/arch_development/static/js/2.952ddcad.chunk.js.map",
+    "static/js/2.137f9cb5.chunk.js": "/arch_development/static/js/2.137f9cb5.chunk.js",
+    "static/js/2.137f9cb5.chunk.js.map": "/arch_development/static/js/2.137f9cb5.chunk.js.map",
     "index.html": "/arch_development/index.html",
-    "precache-manifest.9f456b423760bdadc6c972affe2c3af5.js": "/arch_development/precache-manifest.9f456b423760bdadc6c972affe2c3af5.js",
+    "precache-manifest.3f7df258a73b4142d42c84951cc148c5.js": "/arch_development/precache-manifest.3f7df258a73b4142d42c84951cc148c5.js",
     "service-worker.js": "/arch_development/service-worker.js",
-    "static/js/2.952ddcad.chunk.js.LICENSE.txt": "/arch_development/static/js/2.952ddcad.chunk.js.LICENSE.txt",
+    "static/js/2.137f9cb5.chunk.js.LICENSE.txt": "/arch_development/static/js/2.137f9cb5.chunk.js.LICENSE.txt",
     "static/media/logo_0_2.svg": "/arch_development/static/media/logo_0_2.ede6aa26.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.46d9e632.js",
-    "static/js/2.952ddcad.chunk.js",
-    "static/js/main.65442af6.chunk.js"
+    "static/js/2.137f9cb5.chunk.js",
+    "static/js/main.1fa19f2a.chunk.js"
   ]
 }
