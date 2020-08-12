@@ -48,12 +48,12 @@ export default function Header(props) {
             <Typography variant='h3' className={classes.logoTitle}>
               The Beaver
             </Typography>
+            <Tabs>
+              <Tab label='Home' />
+              <Tab label='Training' />
+              <Tab label='About Me' />
+            </Tabs>
           </Toolbar>
-          <Tabs>
-            <Tab label='Home' />
-            <Tab label='Training' />
-            <Tab label='About Me' />
-          </Tabs>
         </AppBar>
       </ElevationScroll>
       <div className={classes.toolbarMargin} />
