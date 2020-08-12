@@ -24,7 +24,9 @@ const useStyle = makeStyles((theme) => ({
   toolbarMargin: {
     ...theme.mixins.toolbar,
   },
-  logo: {},
+  logo: {
+    height: '3em',
+  },
 }));
 
 export default function Header(props) {
