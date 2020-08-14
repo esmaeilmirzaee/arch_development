@@ -19,6 +19,10 @@ import BrightnessDark from '@material-ui/icons/Brightness7';
 
 import { Link } from 'react-router-dom';
 
+// Enabling menus for academy
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+
 function ElevationScroll(props) {
   const { children, window } = props;
 
@@ -71,10 +75,23 @@ const useStyle = makeStyles((theme) => ({
 export default function Header(props) {
   const classes = useStyle();
   const [value, setValue] = useState(0); // Active tab
+  const [anchorEl, setAnchorEl] = useState(null); // Open or close MenuItem
+  const [open, setOpen] = useState(false);
+
   const currentTheme = false;
 
   const handleActiveTab = (e, newValue) => {
     setValue(newValue);
+  };
+
+  // handle click on menu
+  const handleClick = (e) => {
+    setAnchorEl(e.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+    setOpen(false);
   };
 
   return (
@@ -109,6 +126,9 @@ export default function Header(props) {
                 to='/'
               />
               <Tab
+                aria-owns={anchorEl ? 'simple-menu' : undefined} // menu
+                aria-hasPopup={anchorEl ? true : undefined} // menu
+                onClick={(event) => handleClick(event)} // menu
                 className={classes.tab}
                 // icon={<SchoolIcon />}
                 label='Training'
@@ -136,6 +156,16 @@ export default function Header(props) {
             <Button className={classes.button}>
               {currentTheme ? <BrightnessDark /> : <BrightnessLight />}
             </Button>
+            <Menu
+              id='simple-menu'
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleClose}>Front-end development</MenuItem>
+              <MenuItem onClick={handleClose}>Back-end development</MenuItem>
+              <MenuItem onClick={handleClose}>DevOps</MenuItem>
+            </Menu>
           </Toolbar>
         </AppBar>
       </ElevationScroll>
