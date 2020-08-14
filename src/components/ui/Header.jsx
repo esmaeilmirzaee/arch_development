@@ -163,9 +163,15 @@ export default function Header(props) {
               open={open}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleClose}>Front-end development</MenuItem>
-              <MenuItem onClick={handleClose}>Back-end development</MenuItem>
-              <MenuItem onClick={handleClose}>DevOps</MenuItem>
+              <MenuItem onClick={handleClose} style={{ color: 'black' }}>
+                Front-end development
+              </MenuItem>
+              <MenuItem onClick={handleClose} style={{ color: 'black' }}>
+                Back-end development
+              </MenuItem>
+              <MenuItem onClick={handleClose} style={{ color: 'black' }}>
+                DevOps
+              </MenuItem>
             </Menu>
           </Toolbar>
         </AppBar>
