@@ -196,7 +196,7 @@ export default function Header(props) {
             <Menu
               id='theme-menu'
               anchorEl={anchorElTheme}
-              openTheme={openTheme}
+              open={openTheme}
               onClose={handleThemeClose}
             >
               <MenuItem onClick={handleThemeClose}>
