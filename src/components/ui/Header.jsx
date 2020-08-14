@@ -91,13 +91,21 @@ export default function Header(props) {
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
     setOpen(true);
-
-    console.log(e.currentTarget[7]);
   };
 
   const handleClose = () => {
     setAnchorEl(null);
     setOpen(false);
+  };
+
+  const handleThemeClick = (e) => {
+    setAnchorElTheme(e.currentTarget);
+    setOpenTheme(true);
+  };
+
+  const handleThemeClose = () => {
+    setAnchorElTheme(null);
+    setOpenTheme(false);
   };
 
   return (
@@ -159,7 +167,12 @@ export default function Header(props) {
                 to='/contact'
               />
             </Tabs>
-            <Button className={classes.button}>
+            <Button
+              className={classes.button}
+              aria-owns={anchorElTheme ? 'theme-menu' : undefined}
+              aria-haspopup={anchorElTheme ? 'theme-menu' : undefined}
+              onClick={(event) => handleThemeClick(event)}
+            >
               {currentTheme ? <BrightnessDark /> : <BrightnessLight />}
             </Button>
             {/* Training Menu */}
@@ -188,6 +201,9 @@ export default function Header(props) {
             >
               <MenuItem onClick={handleClose}>
                 <BrightnessDark />
+              </MenuItem>
+              <MenuItem onClick={handleClose}>
+                <BrightnessLight />
               </MenuItem>
             </Menu>
           </Toolbar>
