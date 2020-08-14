@@ -170,7 +170,7 @@ export default function Header(props) {
             <Button
               className={classes.button}
               aria-owns={anchorElTheme ? 'theme-menu' : undefined}
-              aria-haspopup={anchorElTheme ? 'theme-menu' : undefined}
+              aria-haspopup={anchorElTheme ? true : undefined}
               onClick={(event) => handleThemeClick(event)}
             >
               {currentTheme ? <BrightnessDark /> : <BrightnessLight />}
@@ -197,12 +197,12 @@ export default function Header(props) {
               id='theme-menu'
               anchorElTheme={anchorElTheme}
               openTheme={openTheme}
-              onClose={handleClose}
+              onClose={handleThemeClose}
             >
-              <MenuItem onClick={handleClose}>
+              <MenuItem onClick={handleThemeClose}>
                 <BrightnessDark />
               </MenuItem>
-              <MenuItem onClick={handleClose}>
+              <MenuItem onClick={handleThemeClose}>
                 <BrightnessLight />
               </MenuItem>
             </Menu>
