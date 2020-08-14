@@ -87,7 +87,7 @@ export default function Header(props) {
   // handle click on menu
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
-    console.log('here');
+    setOpen(true);
   };
 
   const handleClose = () => {
