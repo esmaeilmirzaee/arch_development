@@ -16,6 +16,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import Button from '@material-ui/core/Button';
 import BrightnessLight from '@material-ui/icons/BrightnessMedium';
 import BrightnessDark from '@material-ui/icons/Brightness7';
+import PaletteIcon from '@material-ui/icons/Palette';
 
 import { Link } from 'react-router-dom';
 
@@ -173,7 +174,7 @@ export default function Header(props) {
               aria-haspopup={anchorElTheme ? true : undefined}
               onClick={(event) => handleThemeClick(event)}
             >
-              {currentTheme ? <BrightnessDark /> : <BrightnessLight />}
+              <PaletteIcon />
             </Button>
             {/* Training Menu */}
             <Menu
@@ -199,12 +200,10 @@ export default function Header(props) {
               open={openTheme}
               onClose={handleThemeClose}
             >
-              <MenuItem onClick={handleThemeClose}>
-                <BrightnessDark />
-              </MenuItem>
-              <MenuItem onClick={handleThemeClose}>
-                <BrightnessLight />
-              </MenuItem>
+              <MenuItem onClick={handleThemeClose}>Rust</MenuItem>
+              <MenuItem onClick={handleThemeClose}>Coal</MenuItem>
+              <MenuItem onClick={handleThemeClose}>Navy</MenuItem>
+              <MenuItem onClick={handleThemeClose}>Ayu</MenuItem>
             </Menu>
           </Toolbar>
         </AppBar>
