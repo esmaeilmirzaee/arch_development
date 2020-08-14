@@ -128,13 +128,13 @@ export default function Header(props) {
               <Tab
                 aria-owns={anchorEl ? 'simple-menu' : undefined} // menu
                 aria-hasPopup={anchorEl ? true : undefined} // menu
-                onClick={(event) => handleClick(event)} // menu
                 className={classes.tab}
                 // icon={<SchoolIcon />}
                 label='Training'
                 aria-label='training'
                 component={Link}
                 to='/training'
+                onClick={(event) => handleClick(event)} // menu
               />
               <Tab
                 className={classes.tab}
