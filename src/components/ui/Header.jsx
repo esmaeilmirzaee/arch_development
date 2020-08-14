@@ -55,6 +55,7 @@ const useStyle = makeStyles((theme) => ({
   logoTitle: {
     fontWeight: '400',
     fontStyle: 'italic',
+    color: 'white',
   },
   tabsContainer: {
     marginLeft: 'auto',
@@ -181,17 +182,12 @@ export default function Header(props) {
               id='simple-menu'
               anchorEl={anchorEl}
               open={open}
-              onClose={handleClose}
+              MenuListProps={{ onMouseLeave: handleClose }} // closing menu
+              style={{ transformOrigin: 'bottom' }}
             >
-              <MenuItem onClick={handleClose} style={{ color: 'black' }}>
-                Front-end development
-              </MenuItem>
-              <MenuItem onClick={handleClose} style={{ color: 'black' }}>
-                Back-end development
-              </MenuItem>
-              <MenuItem onClick={handleClose} style={{ color: 'black' }}>
-                DevOps
-              </MenuItem>
+              <MenuItem onClick={handleClose}>Front-end development</MenuItem>
+              <MenuItem onClick={handleClose}>Back-end development</MenuItem>
+              <MenuItem onClick={handleClose}>DevOps</MenuItem>
             </Menu>
             {/* Colour theme selection menu */}
             <Menu
@@ -199,6 +195,7 @@ export default function Header(props) {
               anchorEl={anchorElTheme}
               open={openTheme}
               onClose={handleThemeClose}
+              style={{ transformOrigin: 'bottom' }}
             >
               <MenuItem onClick={handleThemeClose}>Rust</MenuItem>
               <MenuItem onClick={handleThemeClose}>Coal</MenuItem>
