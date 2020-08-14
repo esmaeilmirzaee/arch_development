@@ -87,6 +87,7 @@ export default function Header(props) {
   // handle click on menu
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
+    console.log('here');
   };
 
   const handleClose = () => {
@@ -128,13 +129,13 @@ export default function Header(props) {
               <Tab
                 aria-owns={anchorEl ? 'simple-menu' : undefined} // menu
                 aria-haspopup={anchorEl ? true : undefined} // menu
-                onClick={(event) => handleClick(event)} // menu
                 className={classes.tab}
                 // icon={<SchoolIcon />}
                 label='Training'
                 aria-label='training'
                 component={Link}
                 to='/training'
+                onClick={(event) => handleClick(event)} // menu
               />
               <Tab
                 className={classes.tab}
