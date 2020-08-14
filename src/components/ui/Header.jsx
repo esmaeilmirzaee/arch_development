@@ -195,7 +195,7 @@ export default function Header(props) {
             {/* Colour theme selection menu */}
             <Menu
               id='theme-menu'
-              anchorElTheme={anchorElTheme}
+              anchorEl={anchorElTheme}
               openTheme={openTheme}
               onClose={handleThemeClose}
             >
