@@ -78,6 +78,9 @@ export default function Header(props) {
   const [anchorEl, setAnchorEl] = useState(null); // Open or close MenuItem
   const [open, setOpen] = useState(false);
 
+  const [anchorElTheme, setAnchorElTheme] = useState(null);
+  const [openTheme, setOpenTheme] = useState(false);
+
   const currentTheme = false;
 
   const handleActiveTab = (e, newValue) => {
@@ -88,6 +91,8 @@ export default function Header(props) {
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
     setOpen(true);
+
+    console.log(e.currentTarget);
   };
 
   const handleClose = () => {
@@ -157,6 +162,7 @@ export default function Header(props) {
             <Button className={classes.button}>
               {currentTheme ? <BrightnessDark /> : <BrightnessLight />}
             </Button>
+            {/* Training Menu */}
             <Menu
               id='simple-menu'
               anchorEl={anchorEl}
@@ -171,6 +177,17 @@ export default function Header(props) {
               </MenuItem>
               <MenuItem onClick={handleClose} style={{ color: 'black' }}>
                 DevOps
+              </MenuItem>
+            </Menu>
+            {/* Colour theme selection menu */}
+            <Menu
+              id='theme-menu'
+              anchorElTheme={anchorElTheme}
+              openTheme={openTheme}
+              onClose={handleClose}
+            >
+              <MenuItem onClick={handleClose}>
+                <BrightnessDark />
               </MenuItem>
             </Menu>
           </Toolbar>
