@@ -92,7 +92,7 @@ export default function Header(props) {
     setAnchorEl(e.currentTarget);
     setOpen(true);
 
-    console.log(e.currentTarget);
+    console.log(e.currentTarget[7]);
   };
 
   const handleClose = () => {
@@ -140,7 +140,7 @@ export default function Header(props) {
                 aria-label='training'
                 component={Link}
                 to='/training'
-                onClick={(event) => handleClick(event)} // menu
+                onMouseOver={(event) => handleClick(event)} // menu
               />
               <Tab
                 className={classes.tab}
