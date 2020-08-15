@@ -185,9 +185,38 @@ export default function Header(props) {
               MenuListProps={{ onMouseLeave: handleClose }} // closing menu
               style={{ transformOrigin: 'bottom' }}
             >
-              <MenuItem onClick={handleClose}>Front-end development</MenuItem>
-              <MenuItem onClick={handleClose}>Back-end development</MenuItem>
-              <MenuItem onClick={handleClose}>DevOps</MenuItem>
+              <MenuItem
+                onClick={() => {
+                  handleClose();
+                  setValue(1);
+                }}
+              >
+                Training
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  handleClose();
+                  setValue(1);
+                }}
+              >
+                Front-end development
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  handleClose();
+                  setValue();
+                }}
+              >
+                Back-end development
+              </MenuItem>
+              <MenuItem
+                onClick={() => {
+                  handleClose();
+                  setValue();
+                }}
+              >
+                DevOps
+              </MenuItem>
             </Menu>
             {/* Colour theme selection menu */}
             <Menu
