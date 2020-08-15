@@ -8,14 +8,14 @@ import { makeStyles } from '@material-ui/styles';
 import logo from '../../assets/img/logo_0_2.svg';
 
 import { Tabs, Tab } from '@material-ui/core';
-import WorkIcon from '@material-ui/icons/Work';
-import SchoolIcon from '@material-ui/icons/School';
-import ContactsIcon from '@material-ui/icons/Contacts';
-import HomeIcon from '@material-ui/icons/Home';
+// import WorkIcon from '@material-ui/icons/Work';
+// import SchoolIcon from '@material-ui/icons/School';
+// import ContactsIcon from '@material-ui/icons/Contacts';
+// import HomeIcon from '@material-ui/icons/Home';
 
 import Button from '@material-ui/core/Button';
-import BrightnessLight from '@material-ui/icons/BrightnessMedium';
-import BrightnessDark from '@material-ui/icons/Brightness7';
+// import BrightnessLight from '@material-ui/icons/BrightnessMedium';
+// import BrightnessDark from '@material-ui/icons/Brightness7';
 import PaletteIcon from '@material-ui/icons/Palette';
 
 import { Link } from 'react-router-dom';
@@ -25,7 +25,8 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
 function ElevationScroll(props) {
-  const { children, window } = props;
+  // const { children, window } = props;
+  const { children } = props;
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -83,7 +84,7 @@ export default function Header(props) {
   const [anchorElTheme, setAnchorElTheme] = useState(null);
   const [openTheme, setOpenTheme] = useState(false);
 
-  const currentTheme = false;
+  // const currentTheme = false;
 
   const handleActiveTab = (e, newValue) => {
     setValue(newValue);
