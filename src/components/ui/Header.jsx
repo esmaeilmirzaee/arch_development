@@ -190,6 +190,8 @@ export default function Header(props) {
                   handleClose();
                   setValue(1);
                 }}
+                component={Link}
+                to='/training'
               >
                 Training
               </MenuItem>
@@ -198,6 +200,8 @@ export default function Header(props) {
                   handleClose();
                   setValue(1);
                 }}
+                component={Link}
+                to='/frontend_development'
               >
                 Front-end development
               </MenuItem>
@@ -206,6 +210,8 @@ export default function Header(props) {
                   handleClose();
                   setValue();
                 }}
+                component={Link}
+                to='/backend_development'
               >
                 Back-end development
               </MenuItem>
@@ -214,6 +220,8 @@ export default function Header(props) {
                   handleClose();
                   setValue();
                 }}
+                component={Link}
+                to='/devops'
               >
                 DevOps
               </MenuItem>
