@@ -123,7 +123,11 @@ export default function Header(props) {
               disableRipple
             >
               <img src={logo} alt="Company's logo" className={classes.logo} />
-              <Typography variant='h5' className={classes.logoTitle}>
+              <Typography
+                variant='h5'
+                className={classes.logoTitle}
+                style={{ color: 'white' }}
+              >
                 The Beaver
               </Typography>
             </Button>
