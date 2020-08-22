@@ -27,6 +27,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 import { useTheme } from '@material-ui/core';
 import { useMediaQuery } from '@material-ui/core';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 
 function ElevationScroll(props) {
   // const { children, window } = props;
@@ -102,6 +105,7 @@ const useStyle = makeStyles((theme) => ({
   drawerIcon: {
     height: '3rem',
     width: '3rem',
+    color: 'white',
   },
 }));
 
@@ -302,7 +306,41 @@ export default function Header(props) {
         onClose={() => setOpenDrawer(false)}
         onOpen={() => setOpenDrawer(true)}
       >
-        Example Drawer
+        <List disablePadding>
+          <ListItem
+            button
+            component={Link}
+            to='/'
+            onClick={() => setOpenDrawer(false)}
+          >
+            <ListItemText disableTypography>Home</ListItemText>
+          </ListItem>
+          <ListItem
+            button
+            component={Link}
+            to='/training'
+            onClick={() => setOpenDrawer(false)}
+          >
+            <ListItemText disableTypography>Training</ListItemText>
+          </ListItem>
+          <ListItem
+            divider
+            button
+            component={Link}
+            to='/about'
+            onClick={() => setOpenDrawer(false)}
+          >
+            <ListItemText disableTypography>About</ListItemText>
+          </ListItem>
+          <ListItem
+            button
+            component={Link}
+            to='/hire_me'
+            onClick={() => setOpenDrawer(false)}
+          >
+            <ListItemText disableTypography>Hire Me</ListItemText>
+          </ListItem>
+        </List>
       </SwipeableDrawer>
       <IconButton
         className={classes.drawerIconContainer}
