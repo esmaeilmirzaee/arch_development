@@ -319,9 +319,9 @@ export default function Header(props) {
         classes={{ paper: classes.drawer }}
       >
         <List disablePadding>
-          <ListItem divier disableRipple>
-            <img src={logo} alt="Company's logo" className={classes.logo} />
-          </ListItem>
+          {/* <ListItem divier disableRipple> */}
+          {/* <img src={logo} alt="Company's logo" className={classes.logo} /> */}
+          {/* </ListItem> */}
           <ListItem
             button
             component={Link}
