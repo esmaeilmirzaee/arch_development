@@ -71,6 +71,17 @@ const useStyle = makeStyles((theme) => ({
     color: '#fdfdfd',
     // marginBottom: '2rem',
   },
+  menu: {
+    backgroundColor: theme.palette.common.blue,
+    color: 'white',
+  },
+  menuItem: {
+    ...theme.typography.tab,
+    opacity: 0.7,
+    '&:hover': {
+      opacity: 1,
+    },
+  },
 }));
 
 // TODO: I didn't add useEffect to handle refresh page...
@@ -189,6 +200,8 @@ export default function Header(props) {
               open={open}
               MenuListProps={{ onMouseLeave: handleClose }} // closing menu
               style={{ transformOrigin: 'bottom' }}
+              classes={{ paper: classes.menu }}
+              elevation={0}
             >
               <MenuItem
                 onClick={() => {
@@ -198,7 +211,7 @@ export default function Header(props) {
                 component={Link}
                 to='/training'
               >
-                Training
+                ⎩Training
               </MenuItem>
               <MenuItem
                 onClick={() => {
@@ -207,8 +220,9 @@ export default function Header(props) {
                 }}
                 component={Link}
                 to='/frontend_development'
+                classes={{ root: classes.menuItem }}
               >
-                Front-end development
+                ⎩Front-end development
               </MenuItem>
               <MenuItem
                 onClick={() => {
@@ -217,8 +231,9 @@ export default function Header(props) {
                 }}
                 component={Link}
                 to='/backend_development'
+                classes={{ root: classes.menuItem }}
               >
-                Back-end development
+                ⎩Back-end development
               </MenuItem>
               <MenuItem
                 onClick={() => {
@@ -227,8 +242,9 @@ export default function Header(props) {
                 }}
                 component={Link}
                 to='/devops'
+                classes={{ root: classes.menuItem }}
               >
-                DevOps
+                ⎩DevOps
               </MenuItem>
             </Menu>
             {/* Colour theme selection menu */}
