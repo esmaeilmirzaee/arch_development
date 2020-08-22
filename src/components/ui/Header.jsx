@@ -232,7 +232,6 @@ export default function Header(props) {
             >
               {menuItemOptions.map((option, id) => (
                 <MenuItem
-
                   onClick={() => {
                     handleClose();
                     setValue(1);
@@ -247,6 +246,7 @@ export default function Header(props) {
                   {option.name}
                 </MenuItem>
               ))}
+            </Menu>
             {/* Colour theme selection menu */}
             <Menu
               id='theme-menu'
