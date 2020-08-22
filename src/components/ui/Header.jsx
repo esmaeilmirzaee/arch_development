@@ -95,6 +95,8 @@ export default function Header(props) {
   const [anchorElTheme, setAnchorElTheme] = useState(null);
   const [openTheme, setOpenTheme] = useState(false);
 
+  const [selectedIndex, setSelectedIndex] = useState(0); // Make a selected menu active or visible
+
   // const currentTheme = false;
 
   const handleActiveTab = (e, newValue) => {
@@ -105,6 +107,12 @@ export default function Header(props) {
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
     setOpen(true);
+  };
+
+  const handleMenuItemClick = (id) => {
+    setAnchorEl(null);
+    setOpen(false);
+    setSelectedIndex(id);
   };
 
   const handleClose = () => {
@@ -121,6 +129,25 @@ export default function Header(props) {
     setAnchorElTheme(null);
     setOpenTheme(false);
   };
+
+  const menuItemOptions = [
+    {
+      name: 'Training',
+      link: '/training',
+    },
+    {
+      name: '⎩  Frontend development',
+      link: '/trainging/frontend_development',
+    },
+    {
+      name: '⎩  Backend development',
+      link: '/training/backend_development',
+    },
+    {
+      name: '⎩  DevOps',
+      link: '/training/devops',
+    },
+  ];
 
   return (
     <>
@@ -203,58 +230,32 @@ export default function Header(props) {
               classes={{ paper: classes.menu }}
               elevation={0}
             >
-              <MenuItem
-                onClick={() => {
-                  handleClose();
-                  setValue(1);
-                }}
-                component={Link}
-                to='/training'
-              >
-                Training
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  handleClose();
-                  setValue(1);
-                }}
-                component={Link}
-                to='/frontend_development'
-                classes={{ root: classes.menuItem }}
-              >
-                ⎩ Front-end development
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  handleClose();
-                  setValue();
-                }}
-                component={Link}
-                to='/backend_development'
-                classes={{ root: classes.menuItem }}
-              >
-                ⎩ Back-end development
-              </MenuItem>
-              <MenuItem
-                onClick={() => {
-                  handleClose();
-                  setValue();
-                }}
-                component={Link}
-                to='/devops'
-                classes={{ root: classes.menuItem }}
-              >
-                ⎩ DevOps
-              </MenuItem>
-            </Menu>
+              {menuItemOptions.map((option, id) => (
+                <MenuItem
+
+                  onClick={() => {
+                    handleClose();
+                    setValue(1);
+                    handleMenuItemClick(id);
+                  }}
+                  key={id}
+                  selected={id === selectedIndex}
+                  component={Link}
+                  to='{option.link}'
+                  classes={{ root: classes.menuItem }}
+                >
+                  {option.name}
+                </MenuItem>
+              ))}
             {/* Colour theme selection menu */}
             <Menu
               id='theme-menu'
               anchorEl={anchorElTheme}
               open={openTheme}
               onClose={handleThemeClose}
-              style={{ transformOrigin: 'bottom' }}
+              style={{ marginRight: '2rem' }}
               classes={{ paper: classes.menu }}
+              elevation={0}
             >
               <MenuItem
                 onClick={handleThemeClose}
