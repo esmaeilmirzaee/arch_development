@@ -9,7 +9,7 @@ import logo from '../../assets/img/logo_0_2.svg';
 
 import { Tabs, Tab } from '@material-ui/core';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import IconButton from '@material-io/icons/IconButton';
+import IconButton from '@material-io/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 // import ContactsIcon from '@material-ui/icons/Contacts';
 // import HomeIcon from '@material-ui/icons/Home';
@@ -309,7 +309,7 @@ export default function Header(props) {
         onClick={() => setOpenDrawer(!openDrawer)}
         disableRipple
       >
-        <MenuItem className={classes.drawerIcon} />
+        <MenuIcon className={classes.drawerIcon} />
       </IconButton>
     </React.Fragment>
   );
