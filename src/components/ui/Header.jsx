@@ -9,7 +9,7 @@ import logo from '../../assets/img/logo_0_2.svg';
 
 import { Tabs, Tab } from '@material-ui/core';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import IconButton from '@material-io/core/IconButton';
+import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 // import ContactsIcon from '@material-ui/icons/Contacts';
 // import HomeIcon from '@material-ui/icons/Home';
