@@ -119,6 +119,14 @@ const useStyle = makeStyles((theme) => ({
     opacity: 1,
   },
   drawerLogo: {
+    height: '3em',
+    padding: '.5em',
+    [theme.breakpoints.down('md')]: {
+      height: '2em',
+    },
+    [theme.breakpoints.down('xs')]: {
+      height: '1.5em',
+    },
     boxShadow: '0.1rem 0.1rem 0.5rem 0.1rem #fff',
   },
 }));
