@@ -248,7 +248,7 @@ export default function Header(props) {
         id='simple-menu'
         anchorEl={anchorEl}
         open={open}
-        MenuListProps={{ onMouseLeave: handleClose }} // closing menu
+        MenuListProps={{ onMouseLeave: handleClose() }} // closing menu
         style={{ transformOrigin: 'bottom' }}
         classes={{ paper: classes.menu }}
         elevation={0}
@@ -319,6 +319,9 @@ export default function Header(props) {
         classes={{ paper: classes.drawer }}
       >
         <List disablePadding>
+          <ListItem button component={Link}>
+            <img src={logo} alt="Company's logo" className={classes.logo} />
+          </ListItem>
           <ListItem
             button
             component={Link}
