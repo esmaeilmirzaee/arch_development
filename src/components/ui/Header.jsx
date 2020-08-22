@@ -8,8 +8,9 @@ import { makeStyles } from '@material-ui/styles';
 import logo from '../../assets/img/logo_0_2.svg';
 
 import { Tabs, Tab } from '@material-ui/core';
-// import WorkIcon from '@material-ui/icons/Work';
-// import SchoolIcon from '@material-ui/icons/School';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import IconButton from '@material-io/icons/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 // import ContactsIcon from '@material-ui/icons/Contacts';
 // import HomeIcon from '@material-ui/icons/Home';
 
@@ -92,6 +93,16 @@ const useStyle = makeStyles((theme) => ({
       opacity: 1,
     },
   },
+  drawerIconContainer: {
+    marginLeft: 'auto',
+    '&:hover': {
+      backgroundColor: 'transparent',
+    },
+  },
+  drawerIcon: {
+    height: '3rem',
+    width: '3rem',
+  },
 }));
 
 // TODO: I didn't add useEffect to handle refresh page...
@@ -99,17 +110,20 @@ const useStyle = makeStyles((theme) => ({
 export default function Header(props) {
   const classes = useStyle();
   const theme = useTheme();
+
   const [value, setValue] = useState(0); // Active tab
   const [anchorEl, setAnchorEl] = useState(null); // Open or close MenuItem
-  const [open, setOpen] = useState(false);
+  const [open, setOpenMenu] = useState(false);
+  const matches = useMediaQuery(theme.breakpoints.down('md'));
+  const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
 
+  const [openDrawer, setOpenDrawer] = useState(false);
   const [anchorElTheme, setAnchorElTheme] = useState(null);
   const [openTheme, setOpenTheme] = useState(false);
 
   const [selectedIndex, setSelectedIndex] = useState(0); // Make a selected menu active or visible
 
   // const currentTheme = false;
-  const matches = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleActiveTab = (e, newValue) => {
     setValue(newValue);
@@ -118,18 +132,18 @@ export default function Header(props) {
   // handle click on menu
   const handleClick = (e) => {
     setAnchorEl(e.currentTarget);
-    setOpen(true);
+    setOpenMenu(true);
   };
 
   const handleMenuItemClick = (id) => {
     setAnchorEl(null);
-    setOpen(false);
+    setOpenMenu(false);
     setSelectedIndex(id);
   };
 
   const handleClose = () => {
     setAnchorEl(null);
-    setOpen(false);
+    setOpenMenu(false);
   };
 
   const handleThemeClick = (e) => {
@@ -183,7 +197,7 @@ export default function Header(props) {
           aria-haspopup={anchorEl ? true : undefined} // menu
           className={classes.tab}
           // icon={<SchoolIcon />}
-          label='Training'
+          label='Training   ▿'
           aria-label='training'
           component={Link}
           to='/training'
@@ -193,7 +207,7 @@ export default function Header(props) {
           className={classes.tab}
           // icon={<WorkIcon />}
           label='About Me'
-          aria-label='resume'
+          aria-label='Curriculm Vittae'
           component={Link}
           to='/about'
         />
@@ -279,6 +293,27 @@ export default function Header(props) {
     </React.Fragment>
   );
 
+  const drawer = (
+    <React.Fragment>
+      <SwipeableDrawer
+        disableBackdropTransition={!iOS}
+        disableDiscovery={iOS}
+        open={openDrawer}
+        onClose={() => setOpenDrawer(false)}
+        onOpen={() => setOpenDrawer(true)}
+      >
+        Example Drawer
+      </SwipeableDrawer>
+      <IconButton
+        className={classes.drawerIconContainer}
+        onClick={() => setOpenDrawer(!openDrawer)}
+        disableRipple
+      >
+        <MenuItem className={classes.drawerIcon} />
+      </IconButton>
+    </React.Fragment>
+  );
+
   return (
     <>
       <ElevationScroll>
@@ -299,7 +334,7 @@ export default function Header(props) {
                 The Beaver
               </Typography>
             </Button>
-            {matches ? null : tabs}
+            {matches ? drawer : tabs}
           </Toolbar>
         </AppBar>
       </ElevationScroll>
