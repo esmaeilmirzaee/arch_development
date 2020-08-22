@@ -105,7 +105,7 @@ export default function Header(props) {
   const [selectedIndex, setSelectedIndex] = useState(0); // Make a selected menu active or visible
 
   // const currentTheme = false;
-  const matches = useMediaQuery(theme.breackpoints.down('md'));
+  const matches = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleActiveTab = (e, newValue) => {
     setValue(newValue);
