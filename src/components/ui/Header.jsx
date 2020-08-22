@@ -120,26 +120,6 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-// TODO: it's incomplete
-// FIXME
-useEffect(() => {
-  switch (window.location.pathname) {
-    case '/':
-      if (value !== 0) {
-        setValue(0);
-      }
-      break;
-    case '/home':
-      if (value !== 1) {
-        setValue(1);
-        setSelectedIndex(0);
-      }
-      break;
-    default:
-      break;
-  }
-}, [value]);
-
 export default function Header(props) {
   const classes = useStyle();
   const theme = useTheme();
@@ -207,6 +187,26 @@ export default function Header(props) {
       link: '/training/devops',
     },
   ];
+
+  // TODO: it's incomplete
+  // FIXME
+  useEffect(() => {
+    switch (window.location.pathname) {
+      case '/':
+        if (value !== 0) {
+          setValue(0);
+        }
+        break;
+      case '/home':
+        if (value !== 1) {
+          setValue(1);
+          setSelectedIndex(0);
+        }
+        break;
+      default:
+        break;
+    }
+  }, [value]);
 
   const tabs = (
     <React.Fragment>
