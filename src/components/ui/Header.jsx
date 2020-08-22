@@ -211,7 +211,7 @@ export default function Header(props) {
                 component={Link}
                 to='/training'
               >
-                ⎩Training
+                Training
               </MenuItem>
               <MenuItem
                 onClick={() => {
@@ -222,7 +222,7 @@ export default function Header(props) {
                 to='/frontend_development'
                 classes={{ root: classes.menuItem }}
               >
-                ⎩Front-end development
+                ⎩ Front-end development
               </MenuItem>
               <MenuItem
                 onClick={() => {
@@ -233,7 +233,7 @@ export default function Header(props) {
                 to='/backend_development'
                 classes={{ root: classes.menuItem }}
               >
-                ⎩Back-end development
+                ⎩ Back-end development
               </MenuItem>
               <MenuItem
                 onClick={() => {
@@ -244,7 +244,7 @@ export default function Header(props) {
                 to='/devops'
                 classes={{ root: classes.menuItem }}
               >
-                ⎩DevOps
+                ⎩ DevOps
               </MenuItem>
             </Menu>
             {/* Colour theme selection menu */}
