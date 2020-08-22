@@ -118,6 +118,9 @@ const useStyle = makeStyles((theme) => ({
   drawerItemSelected: {
     opacity: 1,
   },
+  drawerLogo: {
+    boxShadow: '0.1rem 0.1rem 0.5rem 0.1rem #fff',
+  },
 }));
 
 export default function Header(props) {
@@ -338,7 +341,11 @@ export default function Header(props) {
       >
         <List disablePadding>
           <ListItem divier disableRipple>
-            <img src={logo} alt="Company's logo" className={classes.logo} />
+            <img
+              src={logo}
+              alt="Company's logo"
+              className={[classes.logo, classes.drawerLogo]}
+            />
           </ListItem>
           <ListItem
             button
