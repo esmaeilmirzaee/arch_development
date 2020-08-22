@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -120,7 +120,25 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-// TODO: I didn't add useEffect to handle refresh page...
+// TODO: it's incomplete
+// FIXME
+useEffect(() => {
+  switch (window.location.pathname) {
+    case '/':
+      if (value !== 0) {
+        setValue(0);
+      }
+      break;
+    case '/home':
+      if (value !== 1) {
+        setValue(1);
+        setSelectedIndex(0);
+      }
+      break;
+    default:
+      break;
+  }
+}, [value]);
 
 export default function Header(props) {
   const classes = useStyle();
@@ -248,7 +266,7 @@ export default function Header(props) {
         id='simple-menu'
         anchorEl={anchorEl}
         open={open}
-        MenuListProps={{ onMouseLeave: handleClose() }} // closing menu
+        MenuListProps={{ onMouseLeave: handleClose }} // closing menu
         style={{ transformOrigin: 'bottom' }}
         classes={{ paper: classes.menu }}
         elevation={0}
