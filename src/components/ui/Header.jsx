@@ -72,7 +72,7 @@ const useStyle = makeStyles((theme) => ({
     // marginBottom: '2rem',
   },
   menu: {
-    backgroundColor: theme.palette.common.blue,
+    backgroundColor: theme.palette.common.darkBlue,
     color: 'white',
   },
   menuItem: {
