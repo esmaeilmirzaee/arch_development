@@ -24,6 +24,9 @@ import { Link } from 'react-router-dom';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
+import { useTheme } from '@material-ui/core';
+import { useMediaQuery } from '@material-ui/core';
+
 function ElevationScroll(props) {
   // const { children, window } = props;
   const { children } = props;
@@ -88,6 +91,7 @@ const useStyle = makeStyles((theme) => ({
 
 export default function Header(props) {
   const classes = useStyle();
+  const theme = useTheme();
   const [value, setValue] = useState(0); // Active tab
   const [anchorEl, setAnchorEl] = useState(null); // Open or close MenuItem
   const [open, setOpen] = useState(false);
@@ -98,6 +102,7 @@ export default function Header(props) {
   const [selectedIndex, setSelectedIndex] = useState(0); // Make a selected menu active or visible
 
   // const currentTheme = false;
+  const matches = useMediaQuery(theme.brackpoints.down('md'));
 
   const handleActiveTab = (e, newValue) => {
     setValue(newValue);
@@ -130,7 +135,7 @@ export default function Header(props) {
     setOpenTheme(false);
   };
 
-  const menuItemOptions = [
+  const trainingMenuItemOptions = [
     {
       name: 'Training',
       link: '/training',
@@ -149,6 +154,124 @@ export default function Header(props) {
     },
   ];
 
+  const tabs = (
+    <React.Fragment>
+      <Tabs
+        className={classes.tabsContainer}
+        textColor='secondary'
+        value={value}
+        onChange={handleActiveTab}
+      >
+        <Tab
+          className={classes.tab}
+          // icon={<HomeIcon />}
+          color={'#fff'}
+          label='Home'
+          aria-label='home'
+          component={Link}
+          to='/'
+        />
+        <Tab
+          aria-owns={anchorEl ? 'simple-menu' : undefined} // menu
+          aria-haspopup={anchorEl ? true : undefined} // menu
+          className={classes.tab}
+          // icon={<SchoolIcon />}
+          label='Training'
+          aria-label='training'
+          component={Link}
+          to='/training'
+          onMouseOver={(event) => handleClick(event)} // menu
+        />
+        <Tab
+          className={classes.tab}
+          // icon={<WorkIcon />}
+          label='About Me'
+          aria-label='resume'
+          component={Link}
+          to='/about'
+        />
+        <Tab
+          className={classes.tab}
+          // icon={<ContactsIcon />}
+          label='Contact Me'
+          aria-label='contact me'
+          component={Link}
+          to='/contact'
+        />
+      </Tabs>
+      <Button
+        className={classes.button}
+        aria-owns={anchorElTheme ? 'theme-menu' : undefined}
+        aria-haspopup={anchorElTheme ? true : undefined}
+        onClick={(event) => handleThemeClick(event)}
+      >
+        <PaletteIcon />
+      </Button>
+      {/* Training Menu */}
+      <Menu
+        id='simple-menu'
+        anchorEl={anchorEl}
+        open={open}
+        MenuListProps={{ onMouseLeave: handleClose }} // closing menu
+        style={{ transformOrigin: 'bottom' }}
+        classes={{ paper: classes.menu }}
+        elevation={0}
+      >
+        {trainingMenuItemOptions.map((option, id) => (
+          <MenuItem
+            key={id}
+            classes={{ root: classes.menuItem }}
+            onClick={() => {
+              handleClose();
+              setValue(1);
+              handleMenuItemClick(id);
+            }}
+            selected={id === selectedIndex && value === 1}
+            component={Link}
+            to={option.link}
+          >
+            {option.name}
+          </MenuItem>
+        ))}
+      </Menu>
+      {/* Colour theme selection menu */}
+      <Menu
+        id='theme-menu'
+        anchorEl={anchorElTheme}
+        open={openTheme}
+        onClose={handleThemeClose}
+        style={{ marginRight: '6rem', paddingRight: '2rem' }}
+        classes={{ paper: classes.menu }}
+        elevation={0}
+      >
+        <MenuItem
+          onClick={handleThemeClose}
+          classes={{ root: classes.menuItem }}
+        >
+          Rust
+        </MenuItem>
+        <MenuItem
+          onClick={handleThemeClose}
+          classes={{ root: classes.menuItem }}
+        >
+          Coal
+        </MenuItem>
+        <MenuItem
+          onClick={handleThemeClose}
+          classes={{ root: classes.menuItem }}
+        >
+          Navy
+        </MenuItem>
+        <MenuItem
+          onClick={handleThemeClose}
+          classes={{ root: classes.menuItem }}
+        >
+          Ayu
+        </MenuItem>
+      </Menu>
+    </React.Fragment>
+  );
+
   return (
     <>
       <ElevationScroll>
@@ -164,124 +287,12 @@ export default function Header(props) {
               <Typography
                 variant='h5'
                 className={classes.logoTitle}
-                style={{ color: 'white' }}
+                style={{ color: 'white', textTransform: 'none' }}
               >
                 The Beaver
               </Typography>
             </Button>
-            <Tabs
-              className={classes.tabsContainer}
-              textColor='secondary'
-              value={value}
-              onChange={handleActiveTab}
-            >
-              <Tab
-                className={classes.tab}
-                // icon={<HomeIcon />}
-                color={'#fff'}
-                label='Home'
-                aria-label='home'
-                component={Link}
-                to='/'
-              />
-              <Tab
-                aria-owns={anchorEl ? 'simple-menu' : undefined} // menu
-                aria-haspopup={anchorEl ? true : undefined} // menu
-                className={classes.tab}
-                // icon={<SchoolIcon />}
-                label='Training'
-                aria-label='training'
-                component={Link}
-                to='/training'
-                onMouseOver={(event) => handleClick(event)} // menu
-              />
-              <Tab
-                className={classes.tab}
-                // icon={<WorkIcon />}
-                label='About Me'
-                aria-label='resume'
-                component={Link}
-                to='/about'
-              />
-              <Tab
-                className={classes.tab}
-                // icon={<ContactsIcon />}
-                label='Contact Me'
-                aria-label='contact me'
-                component={Link}
-                to='/contact'
-              />
-            </Tabs>
-            <Button
-              className={classes.button}
-              aria-owns={anchorElTheme ? 'theme-menu' : undefined}
-              aria-haspopup={anchorElTheme ? true : undefined}
-              onClick={(event) => handleThemeClick(event)}
-            >
-              <PaletteIcon />
-            </Button>
-            {/* Training Menu */}
-            <Menu
-              id='simple-menu'
-              anchorEl={anchorEl}
-              open={open}
-              MenuListProps={{ onMouseLeave: handleClose }} // closing menu
-              style={{ transformOrigin: 'bottom' }}
-              classes={{ paper: classes.menu }}
-              elevation={0}
-            >
-              {menuItemOptions.map((option, id) => (
-                <MenuItem
-                  onClick={() => {
-                    handleClose();
-                    setValue(1);
-                    handleMenuItemClick(id);
-                  }}
-                  key={id}
-                  selected={id === selectedIndex && value === 1}
-                  component={Link}
-                  to='{option.link}'
-                  classes={{ root: classes.menuItem }}
-                >
-                  {option.name}
-                </MenuItem>
-              ))}
-            </Menu>
-            {/* Colour theme selection menu */}
-            <Menu
-              id='theme-menu'
-              anchorEl={anchorElTheme}
-              open={openTheme}
-              onClose={handleThemeClose}
-              style={{ marginRight: '2rem' }}
-              classes={{ paper: classes.menu }}
-              elevation={0}
-            >
-              <MenuItem
-                onClick={handleThemeClose}
-                classes={{ root: classes.menuItem }}
-              >
-                Rust
-              </MenuItem>
-              <MenuItem
-                onClick={handleThemeClose}
-                classes={{ root: classes.menuItem }}
-              >
-                Coal
-              </MenuItem>
-              <MenuItem
-                onClick={handleThemeClose}
-                classes={{ root: classes.menuItem }}
-              >
-                Navy
-              </MenuItem>
-              <MenuItem
-                onClick={handleThemeClose}
-                classes={{ root: classes.menuItem }}
-              >
-                Ayu
-              </MenuItem>
-            </Menu>
+            {matches ? null : tabs}
           </Toolbar>
         </AppBar>
       </ElevationScroll>
