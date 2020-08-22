@@ -55,6 +55,9 @@ const useStyle = makeStyles((theme) => ({
   logo: {
     height: '3em',
     padding: '.5em',
+    [theme.breakpoints.down('md')]: {
+      height: '2em',
+    },
   },
   logoTitle: {
     fontWeight: '400',
@@ -102,7 +105,7 @@ export default function Header(props) {
   const [selectedIndex, setSelectedIndex] = useState(0); // Make a selected menu active or visible
 
   // const currentTheme = false;
-  const matches = useMediaQuery(theme.brackpoints.down('md'));
+  const matches = useMediaQuery(theme.breackpoints.down('md'));
 
   const handleActiveTab = (e, newValue) => {
     setValue(newValue);
