@@ -363,7 +363,7 @@ export default function Header(props) {
         classes={{ paper: classes.drawer }}
       >
         <List disablePadding>
-          <ListItem divier disableRipple>
+          <ListItem divider disableRipple>
             <img
               src={logo}
               alt="Company's logo"
