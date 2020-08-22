@@ -175,46 +175,64 @@ export default function Header(props) {
       name: 'Training',
       link: '/training',
       activeIndex: 1,
-      selectedIndex: 0
+      selectedIndex: 0,
     },
     {
       name: '⎩  Frontend development',
       link: '/trainging/frontend_development',
       activeIndex: 1,
-      selectedIndex: 1
+      selectedIndex: 1,
     },
     {
       name: '⎩  Backend development',
       link: '/training/backend_development',
       activeIndex: 1,
-      selectedIndex: 2
+      selectedIndex: 2,
     },
     {
       name: '⎩  DevOps',
       link: '/training/devops',
       activeIndex: 1,
-      selectedIndex: 3
+      selectedIndex: 3,
     },
   ];
 
-  const routes = [{name: 'Home', link:'/', activeIndex: 0},{name: 'Training', link:'/training', activeIndex: 1},{name: 'Frontend development', link:'/training/frontend_development', activeIndex: 2},{name: 'Backend development', link:'/training/backend_development', activeIndex: 3},{name: 'DevOps', link:'/training/devops', activeIndex: 4}, {name: 'About', link:'/about', activeIndex: 5}, {name: 'Hire ME', link:'/hire_me', activeIndex: 6}];
+  const routes = [
+    { name: 'Home', link: '/', activeIndex: 0 },
+    { name: 'Training', link: '/training', activeIndex: 1 },
+    {
+      name: 'Frontend development',
+      link: '/training/frontend_development',
+      activeIndex: 2,
+    },
+    {
+      name: 'Backend development',
+      link: '/training/backend_development',
+      activeIndex: 3,
+    },
+    { name: 'DevOps', link: '/training/devops', activeIndex: 4 },
+    { name: 'About', link: '/about', activeIndex: 5 },
+    { name: 'Hire ME', link: '/hire_me', activeIndex: 6 },
+  ];
 
   // TODO: it's incomplete
   // FIXME
   useEffect(() => {
-    [...trainingMenuItemOptions, ...routes].forEach(route => {
-      switch(window.location.pathname) {
-        case `route.link` :
+    [...trainingMenuItemOptions, ...routes].forEach((route) => {
+      switch (window.location.pathname) {
+        case `route.link`:
           if (value !== route.activeIndex) {
-            setValue(route.activeIndex) 
-            if(route.selectedIndex && route.selectedIndex !== selectedIndex) {
-              setSelectedIndex(route.selectedIndex)
+            setValue(route.activeIndex);
+            if (route.selectedIndex && route.selectedIndex !== selectedIndex) {
+              setSelectedIndex(route.selectedIndex);
             }
           }
           break;
-          default: break;
-      })
-    }, [value, trainingMenuItemOptions, selectedIndex, routes]);
+        default:
+          break;
+      }
+    });
+  }, [value, trainingMenuItemOptions, selectedIndex, routes]);
 
   const tabs = (
     <React.Fragment>
