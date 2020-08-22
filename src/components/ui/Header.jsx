@@ -254,11 +254,32 @@ export default function Header(props) {
               open={openTheme}
               onClose={handleThemeClose}
               style={{ transformOrigin: 'bottom' }}
+              classes={{ paper: classes.menu }}
             >
-              <MenuItem onClick={handleThemeClose}>Rust</MenuItem>
-              <MenuItem onClick={handleThemeClose}>Coal</MenuItem>
-              <MenuItem onClick={handleThemeClose}>Navy</MenuItem>
-              <MenuItem onClick={handleThemeClose}>Ayu</MenuItem>
+              <MenuItem
+                onClick={handleThemeClose}
+                classes={{ root: classes.menuItem }}
+              >
+                Rust
+              </MenuItem>
+              <MenuItem
+                onClick={handleThemeClose}
+                classes={{ root: classes.menuItem }}
+              >
+                Coal
+              </MenuItem>
+              <MenuItem
+                onClick={handleThemeClose}
+                classes={{ root: classes.menuItem }}
+              >
+                Navy
+              </MenuItem>
+              <MenuItem
+                onClick={handleThemeClose}
+                classes={{ root: classes.menuItem }}
+              >
+                Ayu
+              </MenuItem>
             </Menu>
           </Toolbar>
         </AppBar>
