@@ -239,7 +239,7 @@ export default function Header(props) {
                     handleMenuItemClick(id);
                   }}
                   key={id}
-                  selected={id === selectedIndex}
+                  selected={id === selectedIndex && value === 1}
                   component={Link}
                   to='{option.link}'
                   classes={{ root: classes.menuItem }}
