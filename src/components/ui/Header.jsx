@@ -58,11 +58,15 @@ const useStyle = makeStyles((theme) => ({
     [theme.breakpoints.down('md')]: {
       height: '2em',
     },
+    [theme.breakpoints.down('xs')]: {
+      height: '1.5em',
+    },
   },
   logoTitle: {
     fontWeight: '400',
     fontStyle: 'italic',
     color: 'white',
+    textTransform: 'none',
   },
   tabsContainer: {
     marginLeft: 'auto',
