@@ -329,7 +329,14 @@ export default function Header(props) {
             }}
             select={value === 0}
           >
-            <ListItemText disableTypography className={value===0 ? [classes.drawerItem, classes.drawerItemSelected], classes.drawerItem}>
+            <ListItemText
+              disableTypography
+              className={
+                value === 0
+                  ? [classes.drawerItem, classes.drawerItemSelected]
+                  : classes.drawerItem
+              }
+            >
               Home
             </ListItemText>
           </ListItem>
@@ -343,7 +350,14 @@ export default function Header(props) {
             }}
             selected={value === 1}
           >
-            <ListItemText disableTypography className={value === 1 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
+            <ListItemText
+              disableTypography
+              className={
+                value === 1
+                  ? [classes.drawerItem, classes.drawerItemSelected]
+                  : classes.drawerItem
+              }
+            >
               Training
             </ListItemText>
           </ListItem>
@@ -358,7 +372,14 @@ export default function Header(props) {
             }}
             selected={value === 2}
           >
-            <ListItemText disableTypography className={value === 2 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
+            <ListItemText
+              disableTypography
+              className={
+                value === 2
+                  ? [classes.drawerItem, classes.drawerItemSelected]
+                  : classes.drawerItem
+              }
+            >
               About
             </ListItemText>
           </ListItem>
@@ -372,7 +393,14 @@ export default function Header(props) {
             }}
             selected={value === 3}
           >
-            <ListItemText disableTypography className={value === 3 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
+            <ListItemText
+              disableTypography
+              className={
+                value === 3
+                  ? [classes.drawerItem, classes.drawerItemSelected]
+                  : classes.drawerItem
+              }
+            >
               Hire Me
             </ListItemText>
           </ListItem>
