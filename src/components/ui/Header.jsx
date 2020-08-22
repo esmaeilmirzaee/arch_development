@@ -107,6 +107,9 @@ const useStyle = makeStyles((theme) => ({
     width: '3rem',
     color: 'white',
   },
+  drawer: {
+    backgroundColor: theme.palette.common.darkBlue,
+  },
 }));
 
 // TODO: I didn't add useEffect to handle refresh page...
@@ -305,6 +308,7 @@ export default function Header(props) {
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
         onOpen={() => setOpenDrawer(true)}
+        classes={{ paper: classes.drawer }}
       >
         <List disablePadding>
           <ListItem
