@@ -113,6 +113,10 @@ const useStyle = makeStyles((theme) => ({
   drawerItem: {
     ...theme.typography.tab,
     color: 'white',
+    opacity: 0.7,
+  },
+  drawerItemSelected: {
+    opacity: 1,
   },
 }));
 
@@ -319,9 +323,13 @@ export default function Header(props) {
             button
             component={Link}
             to='/'
-            onClick={() => setOpenDrawer(false)}
+            onClick={() => {
+              setOpenDrawer(false);
+              setSelectedIndex(0);
+            }}
+            select={value === 0}
           >
-            <ListItemText disableTypography className={classes.drawerItem}>
+            <ListItemText disableTypography className={value===0 ? [classes.drawerItem, classes.drawerItemSelected], classes.drawerItem}>
               Home
             </ListItemText>
           </ListItem>
@@ -329,9 +337,13 @@ export default function Header(props) {
             button
             component={Link}
             to='/training'
-            onClick={() => setOpenDrawer(false)}
+            onClick={() => {
+              setOpenDrawer(false);
+              setSelectedIndex(1);
+            }}
+            selected={value === 1}
           >
-            <ListItemText disableTypography className={classes.drawerItem}>
+            <ListItemText disableTypography className={value === 1 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
               Training
             </ListItemText>
           </ListItem>
@@ -340,9 +352,13 @@ export default function Header(props) {
             button
             component={Link}
             to='/about'
-            onClick={() => setOpenDrawer(false)}
+            onClick={() => {
+              setOpenDrawer(false);
+              setSelectedIndex(2);
+            }}
+            selected={value === 2}
           >
-            <ListItemText disableTypography className={classes.drawerItem}>
+            <ListItemText disableTypography className={value === 2 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
               About
             </ListItemText>
           </ListItem>
@@ -350,9 +366,13 @@ export default function Header(props) {
             button
             component={Link}
             to='/hire_me'
-            onClick={() => setOpenDrawer(false)}
+            onClick={() => {
+              setOpenDrawer(false);
+              setSelectedIndex(3);
+            }}
+            selected={value === 3}
           >
-            <ListItemText disableTypography className={classes.drawerItem}>
+            <ListItemText disableTypography className={value === 3 ? [classes.drawerItem, classes.drawerItemSelected] : classes.drawerItem}>
               Hire Me
             </ListItemText>
           </ListItem>
