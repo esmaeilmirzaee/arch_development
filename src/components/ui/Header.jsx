@@ -174,40 +174,47 @@ export default function Header(props) {
     {
       name: 'Training',
       link: '/training',
+      activeIndex: 1,
+      selectedIndex: 0
     },
     {
       name: '⎩  Frontend development',
       link: '/trainging/frontend_development',
+      activeIndex: 1,
+      selectedIndex: 1
     },
     {
       name: '⎩  Backend development',
       link: '/training/backend_development',
+      activeIndex: 1,
+      selectedIndex: 2
     },
     {
       name: '⎩  DevOps',
       link: '/training/devops',
+      activeIndex: 1,
+      selectedIndex: 3
     },
   ];
+
+  const routes = [{name: 'Home', link:'/', activeIndex: 0},{name: 'Training', link:'/training', activeIndex: 1},{name: 'Frontend development', link:'/training/frontend_development', activeIndex: 2},{name: 'Backend development', link:'/training/backend_development', activeIndex: 3},{name: 'DevOps', link:'/training/devops', activeIndex: 4}, {name: 'About', link:'/about', activeIndex: 5}, {name: 'Hire ME', link:'/hire_me', activeIndex: 6}];
 
   // TODO: it's incomplete
   // FIXME
   useEffect(() => {
-    switch (window.location.pathname) {
-      case '/':
-        if (value !== 0) {
-          setValue(0);
-        }
-        break;
-      case '/home':
-        if (value !== 1) {
-          setValue(1);
-          setSelectedIndex(0);
-        }
-        break;
-      default:
-        break;
-    }
-  }, [value]);
+    [...trainingMenuItemOptions, ...routes].forEach(route => {
+      switch(window.location.pathname) {
+        case `route.link` :
+          if (value !== route.activeIndex) {
+            setValue(route.activeIndex) 
+            if(route.selectedIndex && route.selectedIndex !== selectedIndex) {
+              setSelectedIndex(route.selectedIndex)
+            }
+          }
+          break;
+          default: break;
+      })
+    }, [value, trainingMenuItemOptions, selectedIndex, routes]);
 
   const tabs = (
     <React.Fragment>
