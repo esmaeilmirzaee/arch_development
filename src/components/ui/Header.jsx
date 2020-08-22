@@ -342,7 +342,7 @@ export default function Header(props) {
             <img
               src={logo}
               alt="Company's logo"
-              className={[classes.logo, classes.drawerLogo]}
+              className={classes.logo}
               style={{ boxShadow: '0.1rem 0.1rem 0.1rem 0.1rem #fff' }}
             />
           </ListItem>
