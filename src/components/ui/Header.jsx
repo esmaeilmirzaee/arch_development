@@ -110,6 +110,10 @@ const useStyle = makeStyles((theme) => ({
   drawer: {
     backgroundColor: theme.palette.common.darkBlue,
   },
+  drawerItem: {
+    ...theme.typography.tab,
+    color: 'white',
+  },
 }));
 
 // TODO: I didn't add useEffect to handle refresh page...
@@ -317,7 +321,9 @@ export default function Header(props) {
             to='/'
             onClick={() => setOpenDrawer(false)}
           >
-            <ListItemText disableTypography>Home</ListItemText>
+            <ListItemText disableTypography className={classes.drawerItem}>
+              Home
+            </ListItemText>
           </ListItem>
           <ListItem
             button
@@ -325,7 +331,9 @@ export default function Header(props) {
             to='/training'
             onClick={() => setOpenDrawer(false)}
           >
-            <ListItemText disableTypography>Training</ListItemText>
+            <ListItemText disableTypography className={classes.drawerItem}>
+              Training
+            </ListItemText>
           </ListItem>
           <ListItem
             divider
@@ -334,7 +342,9 @@ export default function Header(props) {
             to='/about'
             onClick={() => setOpenDrawer(false)}
           >
-            <ListItemText disableTypography>About</ListItemText>
+            <ListItemText disableTypography className={classes.drawerItem}>
+              About
+            </ListItemText>
           </ListItem>
           <ListItem
             button
@@ -342,7 +352,9 @@ export default function Header(props) {
             to='/hire_me'
             onClick={() => setOpenDrawer(false)}
           >
-            <ListItemText disableTypography>Hire Me</ListItemText>
+            <ListItemText disableTypography className={classes.drawerItem}>
+              Hire Me
+            </ListItemText>
           </ListItem>
         </List>
       </SwipeableDrawer>
