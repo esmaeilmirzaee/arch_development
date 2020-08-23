@@ -30,16 +30,19 @@ export default function Footer() {
           The Beaver
         </Typography>
       </Grid>
-      <Grid container>
-        <Grid container item direction='column' xs>
-          <Grid item>Training</Grid>
-          <Grid item>Frontend development</Grid>
-          <Grid item>Backend development</Grid>
-          <Grid item>DevOps</Grid>
+
+      <Grid container item direction='column' xs>
+        <Grid item>Training</Grid>
+        <Grid item>Frontend development</Grid>
+        <Grid item>Backend development</Grid>
+        <Grid item>DevOps</Grid>
+      </Grid>
+      <Grid container item direction='column' xs>
+        <Grid item>
+          <Typography>About US</Typography>
         </Grid>
-        <Grid container item direction='column' xs>
-          <Grid item>About us</Grid>
-          <Grid item>Hire ME</Grid>
+        <Grid item>
+          <Typography>Hire Me</Typography>
         </Grid>
       </Grid>
     </Grid>
