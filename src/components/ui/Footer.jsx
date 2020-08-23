@@ -24,14 +24,14 @@ const useStyle = makeStyles((theme) => ({
 export default function Footer() {
   const classes = useStyle();
   return (
-    <Grid container className={classes.footer}>
+    <Grid container className={classes.footer} spacing={2}>
       <Grid item xs>
         <Typography component='h6' variant='h3' className={classes.logo}>
           The Beaver
         </Typography>
       </Grid>
 
-      <Grid container item direction='column' xs>
+      <Grid container item direction='column' xs spacing={2}>
         <Grid item className={classes.link}>
           Training
         </Grid>
@@ -45,7 +45,7 @@ export default function Footer() {
           DevOps
         </Grid>
       </Grid>
-      <Grid container item direction='column' xs>
+      <Grid container item direction='column' xs spacing={2}>
         <Grid item>
           <Typography variant='body2' className={classes.link}>
             About Me
