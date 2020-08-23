@@ -2,12 +2,12 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
-const useStyle = makeStyles((theme) => {
+const useStyle = makeStyles((theme) => ({
   footer: {
-    backgroundColor: theme.palette.common.main;
-    width: '100%';
-  }
-});
+    backgroundColor: theme.palette.common.blueColor,
+    width: '100%',
+  },
+}));
 
 export default function Footer() {
   const classes = useStyle();
