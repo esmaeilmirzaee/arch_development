@@ -21,7 +21,7 @@ export default function Footer() {
   const classes = useStyle();
   return (
     <div className={classes.footer}>
-      <Typography component='h1' variant='h1' className={classes.logo}>
+      <Typography component='h6' variant='h1' className={classes.logo}>
         The Beaver
       </Typography>
     </div>
