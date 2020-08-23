@@ -32,17 +32,29 @@ export default function Footer() {
       </Grid>
 
       <Grid container item direction='column' xs>
-        <Grid item>Training</Grid>
-        <Grid item>Frontend development</Grid>
-        <Grid item>Backend development</Grid>
-        <Grid item>DevOps</Grid>
+        <Grid item className={classes.link}>
+          Training
+        </Grid>
+        <Grid item className={classes.link}>
+          Frontend development
+        </Grid>
+        <Grid item className={classes.link}>
+          Backend development
+        </Grid>
+        <Grid item className={classes.link}>
+          DevOps
+        </Grid>
       </Grid>
       <Grid container item direction='column' xs>
         <Grid item>
-          <Typography variant='body2'>About US</Typography>
+          <Typography variant='body2' className={classes.link}>
+            About Me
+          </Typography>
         </Grid>
         <Grid item>
-          <Typography variant='h5'>Hire Me</Typography>
+          <Typography variant='h5' className={classes.link}>
+            Hire Me
+          </Typography>
         </Grid>
       </Grid>
     </Grid>
