@@ -4,9 +4,8 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyle = makeStyles((theme) => ({
   footer: {
-    backgroundColor: theme.palette.common.lightBlue,
+    backgroundColor: theme.palette.common.darkBlue,
     width: '100%',
-    position: 'relative',
     display: 'flex',
     bottom: '0',
     left: '0',
