@@ -42,7 +42,7 @@ export default function Footer() {
           <Typography variant='body2'>About US</Typography>
         </Grid>
         <Grid item>
-          <Typography variant='body2'>Hire Me</Typography>
+          <Typography variant='h5'>Hire Me</Typography>
         </Grid>
       </Grid>
     </Grid>
