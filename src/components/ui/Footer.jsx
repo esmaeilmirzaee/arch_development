@@ -6,6 +6,12 @@ const useStyle = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.common.lightBlue,
     width: '100%',
+    position: 'relative',
+    bottom: '0',
+    left: '0',
+  },
+  logo: {
+    padding: '3rem',
   },
 }));
 
@@ -13,7 +19,7 @@ export default function Footer() {
   const classes = useStyle();
   return (
     <div className={classes.footer}>
-      <Typography>The Beaver</Typography>
+      <Typography className={classes.logo}>The Beaver</Typography>
     </div>
   );
 }
