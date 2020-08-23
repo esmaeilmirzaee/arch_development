@@ -19,6 +19,7 @@ const useStyle = makeStyles((theme) => ({
   },
   link: {
     color: '#fefefe',
+    textTransform: 'none',
   },
   gridItem: {
     margin: '1rem className={classes.gridItem}',
