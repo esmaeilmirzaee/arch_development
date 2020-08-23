@@ -2,6 +2,7 @@ import React from 'react';
 import { ThemeProvider } from '@material-ui/styles';
 import theme from './ui/Theme';
 import Header from './ui/Header';
+import Footer from './ui/Footer';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -16,6 +17,7 @@ function App() {
           <Route exact path='/contact' component={() => <>Contact</>} />
           <Route exact path='/' component={() => <>Home</>} />
         </Switch>
+        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   );
