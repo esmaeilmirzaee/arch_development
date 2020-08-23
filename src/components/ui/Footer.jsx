@@ -16,6 +16,9 @@ const useStyle = makeStyles((theme) => ({
     padding: '3rem',
     color: theme.palette.common.darkCream,
   },
+  link: {
+    color: '#fefefe',
+  },
 }));
 
 export default function Footer() {
@@ -27,11 +30,17 @@ export default function Footer() {
           The Beaver
         </Typography>
       </Grid>
-      <Grid container item direction='column' xs>
-        <Grid item>Training</Grid>
-        <Grid item>Frontend development</Grid>
-        <Grid item>Backend development</Grid>
-        <Grid item>DevOps</Grid>
+      <Grid container>
+        <Grid container item direction='column' xs>
+          <Grid item>Training</Grid>
+          <Grid item>Frontend development</Grid>
+          <Grid item>Backend development</Grid>
+          <Grid item>DevOps</Grid>
+        </Grid>
+        <Grid container item direction='column' xs>
+          <Grid item>About us</Grid>
+          <Grid item>Hire ME</Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
