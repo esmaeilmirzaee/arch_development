@@ -39,10 +39,10 @@ export default function Footer() {
       </Grid>
       <Grid container item direction='column' xs>
         <Grid item>
-          <Typography>About US</Typography>
+          <Typography variant='body2'>About US</Typography>
         </Grid>
         <Grid item>
-          <Typography>Hire Me</Typography>
+          <Typography variant='body2'>Hire Me</Typography>
         </Grid>
       </Grid>
     </Grid>
