@@ -19,6 +19,9 @@ const useStyle = makeStyles((theme) => ({
   link: {
     color: '#fefefe',
   },
+  gridItem: {
+    margin: '1rem className={classes.gridItem}',
+  },
 }));
 
 export default function Footer() {
@@ -31,21 +34,50 @@ export default function Footer() {
         </Typography>
       </Grid>
 
-      <Grid container item direction='column' xs spacing={2}>
-        <Grid item className={classes.link}>
+      <Grid
+        container
+        item
+        direction='column'
+        xs
+        spacing={2}
+        className={classes.gridItem}
+      >
+        <Grid item className={classes.link} component={Link} to='/training'>
           Training
         </Grid>
-        <Grid item className={classes.link}>
-          Frontend development
+        <Grid
+          item
+          className={classes.link}
+          component={Link}
+          to='/training/frontend_development'
+        >
+          ⎩ Frontend development
         </Grid>
-        <Grid item className={classes.link}>
-          Backend development
+        <Grid
+          item
+          className={classes.link}
+          component={Link}
+          to='/training/backend_development'
+        >
+          ⎩ Backend development
         </Grid>
-        <Grid item className={classes.link}>
-          DevOps
+        <Grid
+          item
+          className={classes.link}
+          component={Link}
+          to='/training/devops'
+        >
+          ⎩ DevOps
         </Grid>
       </Grid>
-      <Grid container item direction='column' xs spacing={2}>
+      <Grid
+        className={classes.gridItem}
+        container
+        item
+        direction='column'
+        xs
+        spacing={2}
+      >
         <Grid item>
           <Typography variant='body2' className={classes.link}>
             About Me
