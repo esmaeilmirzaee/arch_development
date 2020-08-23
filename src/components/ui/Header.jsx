@@ -11,12 +11,8 @@ import { Tabs, Tab } from '@material-ui/core';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-// import ContactsIcon from '@material-ui/icons/Contacts';
-// import HomeIcon from '@material-ui/icons/Home';
 
 import Button from '@material-ui/core/Button';
-// import BrightnessLight from '@material-ui/icons/BrightnessMedium';
-// import BrightnessDark from '@material-ui/icons/Brightness7';
 import PaletteIcon from '@material-ui/icons/Palette';
 
 import { Link } from 'react-router-dom';
@@ -32,7 +28,6 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 function ElevationScroll(props) {
-  // const { children, window } = props;
   const { children } = props;
 
   const trigger = useScrollTrigger({
@@ -136,8 +131,6 @@ export default function Header(props) {
   const [openTheme, setOpenTheme] = useState(false);
 
   const [selectedIndex, setSelectedIndex] = useState(0); // Make a selected menu active or visible
-
-  // const currentTheme = false;
 
   const handleActiveTab = (e, newValue) => {
     setValue(newValue);

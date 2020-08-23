@@ -7,6 +7,7 @@ const useStyle = makeStyles((theme) => ({
     backgroundColor: theme.palette.common.darkBlue,
     width: '100%',
     display: 'flex',
+    position: 'absolute',
     bottom: 0,
     left: 0,
   },
