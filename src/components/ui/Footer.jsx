@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { Hidden } from '@material-ui/core';
+import boxicon from 'boxicons';
 
 const useStyle = makeStyles((theme) => ({
   footer: {
@@ -124,6 +125,11 @@ export default function Footer(props) {
           </Grid>
         </Grid>
       </Hidden>
+      <Grid container item xs>
+        <Grid item>
+          <boxicon name='twitter' type='logo' animation='tada'></boxicon>
+        </Grid>
+      </Grid>
     </Grid>
   );
 }
