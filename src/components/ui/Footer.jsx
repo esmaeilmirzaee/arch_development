@@ -50,7 +50,7 @@ export default function Footer(props) {
       spacing={2}
     >
       <Hidden mdDown>
-        <Grid container item>
+        <Grid container item justify='center'>
           <Grid
             container
             item
