@@ -211,7 +211,7 @@ export default function Header(props) {
     [...trainingMenuItemOptions, ...routes].forEach((route) => {
       switch (window.location.pathname) {
         case `route.link`:
-          if (value !== route.activeIndex) {
+          if (props.value !== route.activeIndex) {
             props.setValue(route.activeIndex);
             if (
               route.selectedIndex &&
@@ -238,7 +238,7 @@ export default function Header(props) {
       <Tabs
         className={classes.tabsContainer}
         textColor='secondary'
-        value={value}
+        value={props.value}
         onChange={handleActiveTab}
       >
         <Tab
@@ -305,7 +305,7 @@ export default function Header(props) {
               props.setValue(1);
               handleMenuItemClick(id);
             }}
-            selected={id === props.selectedIndex && value === 1}
+            selected={id === props.selectedIndex && props.value === 1}
             component={Link}
             to={option.link}
           >
@@ -378,12 +378,12 @@ export default function Header(props) {
               setOpenDrawer(false);
               props.setSelectedIndex(0);
             }}
-            select={value === 0}
+            select={props.value === 0}
           >
             <ListItemText
               disableTypography
               className={
-                value === 0
+                props.value === 0
                   ? [classes.drawerItem, classes.drawerItemSelected]
                   : classes.drawerItem
               }
@@ -399,12 +399,12 @@ export default function Header(props) {
               setOpenDrawer(false);
               props.setSelectedIndex(1);
             }}
-            selected={value === 1}
+            selected={props.value === 1}
           >
             <ListItemText
               disableTypography
               className={
-                value === 1
+                props.value === 1
                   ? [classes.drawerItem, classes.drawerItemSelected]
                   : classes.drawerItem
               }
@@ -421,12 +421,12 @@ export default function Header(props) {
               setOpenDrawer(false);
               props.setSelectedIndex(2);
             }}
-            selected={value === 2}
+            selected={props.value === 2}
           >
             <ListItemText
               disableTypography
               className={
-                value === 2
+                props.value === 2
                   ? [classes.drawerItem, classes.drawerItemSelected]
                   : classes.drawerItem
               }
@@ -442,12 +442,12 @@ export default function Header(props) {
               setOpenDrawer(false);
               props.setSelectedIndex(3);
             }}
-            selected={value === 3}
+            selected={props.value === 3}
           >
             <ListItemText
               disableTypography
               className={
-                value === 3
+                props.value === 3
                   ? [classes.drawerItem, classes.drawerItemSelected]
                   : classes.drawerItem
               }
