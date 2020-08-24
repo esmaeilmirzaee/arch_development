@@ -22,7 +22,7 @@ function App() {
           />
           <Route
             path='/training/backend_development'
-            component={() => <>Backend development</>}
+            component={() => <>Backend_development </>}
           />
           <Route exact path='/training' component={() => <>Training</>} />
           <Route exact path='/about' component={() => <>About</>} />
