@@ -46,7 +46,7 @@ export default function Footer(props) {
       container
       className={classes.footer}
       direction='column'
-      justify='center'
+      alignItems='center'
       spacing={2}
     >
       <Hidden mdDown>
