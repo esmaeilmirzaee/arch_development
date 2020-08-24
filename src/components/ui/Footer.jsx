@@ -4,11 +4,11 @@ import Typography from '@material-ui/core/Typography';
 import { Grid } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { Hidden } from '@material-ui/core';
-import BiTwitter from '../../assets/img/social_network/bxl-github.svg';
+import BiGithub from '../../assets/img/social_network/bxl-github.svg';
 import BiGoogle from '../../assets/img/social_network/bxl-google.svg';
 import BiLinkedin from '../../assets/img/social_network/bxl-linkedin.svg';
 import BiTwitter from '../../assets/img/social_network/bxl-twitter.svg';
-import BiYoutube from '../../assets/img/social_network/bxl-youtube.svg';
+import BiYouTube from '../../assets/img/social_network/bxl-youtube.svg';
 
 const useStyle = makeStyles((theme) => ({
   footer: {
