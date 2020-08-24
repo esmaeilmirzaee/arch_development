@@ -134,7 +134,7 @@ export default function Footer(props) {
           </Grid>
         </Grid>
       </Hidden>
-      <Grid container item xs spacing={1}>
+      <Grid container item xs spacing={1} className={classes.socialMedia}>
         <Grid item>
           <img src={BiGithub} alt='Twitter' />
         </Grid>
