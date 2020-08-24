@@ -21,7 +21,7 @@ const useStyle = makeStyles((theme) => ({
   },
   logo: {
     padding: '3rem',
-    color: theme.palette.common.darkCream,
+    color: theme.palette.text.primary,
   },
   link: {
     color: '#fefefe',
@@ -35,9 +35,7 @@ const useStyle = makeStyles((theme) => ({
   },
   socialMediaIcon: {
     height: '2rem',
-    svg: {
-      color: '#fdfdfd',
-    },
+    color: '#fdfdfd',
   },
 }));
 
@@ -45,10 +43,18 @@ export default function Footer(props) {
   const classes = useStyle();
   return (
     <Grid container className={classes.footer} spacing={2}>
-      <Grid item xs>
-        <Typography component='h6' variant='h3' className={classes.logo}>
-          The Beaver
-        </Typography>
+      <Grid container item direction='column'>
+        <Grid item xs>
+          <Typography component='h6' variant='h6' className={classes.logo}>
+            The Beaver
+          </Typography>
+        </Grid>
+        <Grid item xs>
+          <Typography components='body1' variant='body2'>
+            The Beaver, TheBeaver, and The Beaver logo are registered trademarks
+            of The Beaver, Inc.
+          </Typography>
+        </Grid>
       </Grid>
       <Hidden mdDown>
         <Grid
@@ -146,35 +152,38 @@ export default function Footer(props) {
         spacing={1}
         xs
       >
-        <Grid item>
+        <Grid item xs>
+          <Typography variant='subtitle1'>Follow Us</Typography>
+        </Grid>
+        <Grid item xs>
           <img
             src={BiGithub}
             alt='Twitter'
             className={classes.socialMediaIcon}
           />
         </Grid>
-        <Grid item>
+        <Grid item xs>
           <img
             src={BiGoogle}
             alt='Twitter'
             className={classes.socialMediaIcon}
           />
         </Grid>
-        <Grid item>
+        <Grid item xs>
           <img
             src={BiLinkedin}
             alt='Twitter'
             className={classes.socialMediaIcon}
           />
         </Grid>
-        <Grid item>
+        <Grid item xs>
           <img
             src={BiTwitter}
             alt='Twitter'
             className={classes.socialMediaIcon}
           />
         </Grid>
-        <Grid item>
+        <Grid item xs>
           <img
             src={BiYouTube}
             alt='Twitter'
