@@ -186,7 +186,7 @@ export default function Footer(props) {
           />
         </Grid>
       </Grid>
-      <Grid container item direction='column' justify='center'>
+      <Grid container item direction='column' alignItems='center'>
         <Grid item xs>
           <Typography component='h6' variant='h6' className={classes.logo}>
             The Beaver
