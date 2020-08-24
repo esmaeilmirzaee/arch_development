@@ -34,7 +34,7 @@ const useStyle = makeStyles((theme) => ({
     margin: '1rem',
   },
   socialMediaIcon: {
-    color: '#fdfdfd',
+    backgroundColor: '#fdfdfd',
     height: '2rem',
   },
 }));
