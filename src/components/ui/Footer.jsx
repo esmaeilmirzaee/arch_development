@@ -26,7 +26,7 @@ const useStyle = makeStyles((theme) => ({
   },
 }));
 
-export default function Footer() {
+export default function Footer(props) {
   const classes = useStyle();
   return (
     <Grid container className={classes.footer} spacing={2}>
@@ -44,7 +44,16 @@ export default function Footer() {
         spacing={2}
         className={classes.gridItem}
       >
-        <Grid item className={classes.link} component={Link} to='/training'>
+        <Grid
+          item
+          className={classes.link}
+          component={Link}
+          to='/training'
+          onClick={() => {
+            props.setValue(1);
+            props.setSelectedIndex(0);
+          }}
+        >
           Training
         </Grid>
         <Grid
@@ -52,6 +61,10 @@ export default function Footer() {
           className={classes.link}
           component={Link}
           to='/training/frontend_development'
+          onClick={() => {
+            props.setValue(1);
+            props.setSelectedIndex(1);
+          }}
         >
           ⎩ Frontend development
         </Grid>
@@ -60,6 +73,10 @@ export default function Footer() {
           className={classes.link}
           component={Link}
           to='/training/backend_development'
+          onClick={() => {
+            props.setValue(1);
+            props.setSelectedIndex(2);
+          }}
         >
           ⎩ Backend development
         </Grid>
@@ -68,6 +85,10 @@ export default function Footer() {
           className={classes.link}
           component={Link}
           to='/training/devops'
+          onClick={() => {
+            props.setValue(1);
+            props.setSelectedIndex(3);
+          }}
         >
           ⎩ DevOps
         </Grid>
