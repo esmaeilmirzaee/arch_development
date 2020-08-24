@@ -12,6 +12,18 @@ function App() {
       <BrowserRouter>
         <Header />
         <Switch>
+          <Route
+            path='/training/devops'
+            component={() => <>DevOps Training</>}
+          />
+          <Route
+            path='/training/frontend_development'
+            component={() => <>Frontend development</>}
+          />
+          <Route
+            path='/training/backend_development'
+            component={() => <>Backend development</>}
+          />
           <Route exact path='/training' component={() => <>Training</>} />
           <Route exact path='/about' component={() => <>About</>} />
           <Route exact path='/contact' component={() => <>Contact</>} />
