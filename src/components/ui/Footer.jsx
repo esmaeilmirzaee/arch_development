@@ -42,20 +42,13 @@ const useStyle = makeStyles((theme) => ({
 export default function Footer(props) {
   const classes = useStyle();
   return (
-    <Grid container className={classes.footer} direction='row' spacing={2}>
-      <Grid container item direction='column'>
-        <Grid item xs>
-          <Typography component='h6' variant='h6' className={classes.logo}>
-            The Beaver
-          </Typography>
-        </Grid>
-        <Grid item xs>
-          <Typography components='body1' variant='body2'>
-            The Beaver, TheBeaver, and The Beaver logo are registered trademarks
-            of The Beaver, Inc.
-          </Typography>
-        </Grid>
-      </Grid>
+    <Grid
+      container
+      className={classes.footer}
+      direction='column'
+      justify='center'
+      spacing={2}
+    >
       <Hidden mdDown>
         <Grid container item>
           <Grid
@@ -191,6 +184,19 @@ export default function Footer(props) {
             alt='YouTube'
             className={classes.socialMediaIcon}
           />
+        </Grid>
+      </Grid>
+      <Grid container item direction='column' justify='center'>
+        <Grid item xs>
+          <Typography component='h6' variant='h6' className={classes.logo}>
+            The Beaver
+          </Typography>
+        </Grid>
+        <Grid item xs>
+          <Typography components='body1' variant='body2'>
+            The Beaver, TheBeaver, and The Beaver logo are registered trademarks
+            of The Beaver, Inc.
+          </Typography>
         </Grid>
       </Grid>
     </Grid>
