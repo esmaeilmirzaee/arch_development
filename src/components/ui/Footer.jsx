@@ -57,90 +57,92 @@ export default function Footer(props) {
         </Grid>
       </Grid>
       <Hidden mdDown>
-        <Grid
-          container
-          item
-          direction='column'
-          xs
-          spacing={2}
-          className={classes.gridItem}
-        >
+        <Grid container item>
           <Grid
+            container
             item
-            className={classes.link}
-            component={Link}
-            to='/training'
-            onClick={() => {
-              props.setValue(1);
-              props.setSelectedIndex(0);
-            }}
+            direction='column'
+            xs
+            spacing={2}
+            className={classes.gridItem}
           >
-            Training
-          </Grid>
-          <Grid
-            item
-            className={classes.link}
-            component={Link}
-            to='/training/frontend_development'
-            onClick={() => {
-              props.setValue(1);
-              props.setSelectedIndex(1);
-            }}
-          >
-            ⎩ Frontend development
-          </Grid>
-          <Grid
-            item
-            className={classes.link}
-            component={Link}
-            to='/training/backend_development'
-            onClick={() => {
-              props.setValue(1);
-              props.setSelectedIndex(2);
-            }}
-          >
-            ⎩ Backend development
-          </Grid>
-          <Grid
-            item
-            className={classes.link}
-            component={Link}
-            to='/training/devops'
-            onClick={() => {
-              props.setValue(1);
-              props.setSelectedIndex(3);
-            }}
-          >
-            ⎩ DevOps
-          </Grid>
-        </Grid>
-        <Grid
-          className={classes.gridItem}
-          container
-          item
-          direction='column'
-          xs
-          spacing={2}
-        >
-          <Grid item>
-            <Typography
-              variant='body2'
+            <Grid
+              item
               className={classes.link}
               component={Link}
-              to='/about_me'
+              to='/training'
+              onClick={() => {
+                props.setValue(1);
+                props.setSelectedIndex(0);
+              }}
             >
-              About Me
-            </Typography>
-          </Grid>
-          <Grid item>
-            <Typography
-              variant='h5'
+              Training
+            </Grid>
+            <Grid
+              item
               className={classes.link}
               component={Link}
-              to='/hire_me'
+              to='/training/frontend_development'
+              onClick={() => {
+                props.setValue(1);
+                props.setSelectedIndex(1);
+              }}
             >
-              Hire Me
-            </Typography>
+              ⎩ Frontend development
+            </Grid>
+            <Grid
+              item
+              className={classes.link}
+              component={Link}
+              to='/training/backend_development'
+              onClick={() => {
+                props.setValue(1);
+                props.setSelectedIndex(2);
+              }}
+            >
+              ⎩ Backend development
+            </Grid>
+            <Grid
+              item
+              className={classes.link}
+              component={Link}
+              to='/training/devops'
+              onClick={() => {
+                props.setValue(1);
+                props.setSelectedIndex(3);
+              }}
+            >
+              ⎩ DevOps
+            </Grid>
+          </Grid>
+          <Grid
+            className={classes.gridItem}
+            container
+            item
+            direction='column'
+            xs
+            spacing={2}
+          >
+            <Grid item>
+              <Typography
+                variant='body2'
+                className={classes.link}
+                component={Link}
+                to='/about_me'
+              >
+                About Me
+              </Typography>
+            </Grid>
+            <Grid item>
+              <Typography
+                variant='h5'
+                className={classes.link}
+                component={Link}
+                to='/hire_me'
+              >
+                Hire Me
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
       </Hidden>
