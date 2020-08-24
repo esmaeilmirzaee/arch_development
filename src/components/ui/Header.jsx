@@ -120,7 +120,6 @@ export default function Header(props) {
   const classes = useStyle();
   const theme = useTheme();
 
-  const [value, setValue] = useState(0); // Active tab
   const [anchorEl, setAnchorEl] = useState(null); // Open or close MenuItem
   const [open, setOpenMenu] = useState(false);
   const matches = useMediaQuery(theme.breakpoints.down('md'));
@@ -130,10 +129,8 @@ export default function Header(props) {
   const [anchorElTheme, setAnchorElTheme] = useState(null);
   const [openTheme, setOpenTheme] = useState(false);
 
-  const [selectedIndex, setSelectedIndex] = useState(0); // Make a selected menu active or visible
-
   const handleActiveTab = (e, newValue) => {
-    setValue(newValue);
+    props.setValue(newValue);
   };
 
   // handle click on menu
@@ -145,7 +142,7 @@ export default function Header(props) {
   const handleMenuItemClick = (id) => {
     setAnchorEl(null);
     setOpenMenu(false);
-    setSelectedIndex(id);
+    props.setSelectedIndex(id);
   };
 
   const handleClose = () => {
@@ -215,9 +212,12 @@ export default function Header(props) {
       switch (window.location.pathname) {
         case `route.link`:
           if (value !== route.activeIndex) {
-            setValue(route.activeIndex);
-            if (route.selectedIndex && route.selectedIndex !== selectedIndex) {
-              setSelectedIndex(route.selectedIndex);
+            props.setValue(route.activeIndex);
+            if (
+              route.selectedIndex &&
+              route.selectedIndex !== props.selectedIndex
+            ) {
+              props.setSelectedIndex(route.selectedIndex);
             }
           }
           break;
@@ -225,7 +225,13 @@ export default function Header(props) {
           break;
       }
     });
-  }, [value, trainingMenuItemOptions, selectedIndex, routes]);
+  }, [
+    props.value,
+    trainingMenuItemOptions,
+    props.selectedIndex,
+    routes,
+    props,
+  ]);
 
   const tabs = (
     <React.Fragment>
@@ -266,10 +272,10 @@ export default function Header(props) {
         <Tab
           className={classes.tab}
           // icon={<ContactsIcon />}
-          label='Contact Me'
-          aria-label='contact me'
+          label='Hire Me'
+          aria-label='hire me'
           component={Link}
-          to='/contact'
+          to='/hire_me'
         />
       </Tabs>
       <Button
@@ -296,10 +302,10 @@ export default function Header(props) {
             classes={{ root: classes.menuItem }}
             onClick={() => {
               handleClose();
-              setValue(1);
+              props.setValue(1);
               handleMenuItemClick(id);
             }}
-            selected={id === selectedIndex && value === 1}
+            selected={id === props.selectedIndex && value === 1}
             component={Link}
             to={option.link}
           >
@@ -370,7 +376,7 @@ export default function Header(props) {
             to='/'
             onClick={() => {
               setOpenDrawer(false);
-              setSelectedIndex(0);
+              props.setSelectedIndex(0);
             }}
             select={value === 0}
           >
@@ -391,7 +397,7 @@ export default function Header(props) {
             to='/training'
             onClick={() => {
               setOpenDrawer(false);
-              setSelectedIndex(1);
+              props.setSelectedIndex(1);
             }}
             selected={value === 1}
           >
@@ -413,7 +419,7 @@ export default function Header(props) {
             to='/about'
             onClick={() => {
               setOpenDrawer(false);
-              setSelectedIndex(2);
+              props.setSelectedIndex(2);
             }}
             selected={value === 2}
           >
@@ -434,7 +440,7 @@ export default function Header(props) {
             to='/hire_me'
             onClick={() => {
               setOpenDrawer(false);
-              setSelectedIndex(3);
+              props.setSelectedIndex(3);
             }}
             selected={value === 3}
           >
