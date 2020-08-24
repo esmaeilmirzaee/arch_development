@@ -42,7 +42,7 @@ const useStyle = makeStyles((theme) => ({
 export default function Footer(props) {
   const classes = useStyle();
   return (
-    <Grid container className={classes.footer} spacing={2}>
+    <Grid container className={classes.footer} direction='row' spacing={2}>
       <Grid container item direction='column'>
         <Grid item xs>
           <Typography component='h6' variant='h6' className={classes.logo}>
@@ -160,21 +160,21 @@ export default function Footer(props) {
         <Grid item xs>
           <img
             src={BiGithub}
-            alt='Twitter'
+            alt='Github'
             className={classes.socialMediaIcon}
           />
         </Grid>
         <Grid item xs>
           <img
             src={BiGoogle}
-            alt='Twitter'
+            alt='Google mail'
             className={classes.socialMediaIcon}
           />
         </Grid>
         <Grid item xs>
           <img
             src={BiLinkedin}
-            alt='Twitter'
+            alt='Linkedin'
             className={classes.socialMediaIcon}
           />
         </Grid>
@@ -188,7 +188,7 @@ export default function Footer(props) {
         <Grid item xs>
           <img
             src={BiYouTube}
-            alt='Twitter'
+            alt='YouTube'
             className={classes.socialMediaIcon}
           />
         </Grid>
