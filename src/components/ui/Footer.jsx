@@ -31,7 +31,7 @@ const useStyle = makeStyles((theme) => ({
     margin: '1rem className={classes.gridItem}',
   },
   socialMedia: {
-    color: theme.palette.main,
+    color: theme.palette.background.main,
     height: '3em',
     margin: '1rem',
   },
