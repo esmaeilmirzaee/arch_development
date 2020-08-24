@@ -102,12 +102,22 @@ export default function Footer(props) {
         spacing={2}
       >
         <Grid item>
-          <Typography variant='body2' className={classes.link}>
+          <Typography
+            variant='body2'
+            className={classes.link}
+            component={Link}
+            to='/about_me'
+          >
             About Me
           </Typography>
         </Grid>
         <Grid item>
-          <Typography variant='h5' className={classes.link}>
+          <Typography
+            variant='h5'
+            className={classes.link}
+            component={Link}
+            to='/hire_me'
+          >
             Hire Me
           </Typography>
         </Grid>
