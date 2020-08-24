@@ -42,13 +42,7 @@ const useStyle = makeStyles((theme) => ({
 export default function Footer(props) {
   const classes = useStyle();
   return (
-    <Grid
-      container
-      className={classes.footer}
-      direction='column'
-      alignItems='center'
-      spacing={2}
-    >
+    <Grid container className={classes.footer} direction='column' spacing={2}>
       <Hidden mdDown>
         <Grid container item justify='center'>
           <Grid
@@ -144,6 +138,7 @@ export default function Footer(props) {
         item
         className={classes.socialMedia}
         justify='flex-end'
+        alignItems='flex-end'
         spacing={1}
         xs
       >
