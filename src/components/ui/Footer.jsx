@@ -34,8 +34,8 @@ const useStyle = makeStyles((theme) => ({
     margin: '1rem',
   },
   socialMediaIcon: {
-    color: theme.palette.background.paper,
-    height: '4rem',
+    color: '#fdfdfd',
+    height: '2rem',
   },
 }));
 
@@ -152,16 +152,32 @@ export default function Footer(props) {
           />
         </Grid>
         <Grid item>
-          <img src={BiGoogle} alt='Twitter' />
+          <img
+            src={BiGoogle}
+            alt='Twitter'
+            className={classes.socialMediaIcon}
+          />
         </Grid>
         <Grid item>
-          <img src={BiLinkedin} alt='Twitter' />
+          <img
+            src={BiLinkedin}
+            alt='Twitter'
+            className={classes.socialMediaIcon}
+          />
         </Grid>
         <Grid item>
-          <img src={BiTwitter} alt='Twitter' />
+          <img
+            src={BiTwitter}
+            alt='Twitter'
+            className={classes.socialMediaIcon}
+          />
         </Grid>
         <Grid item>
-          <img src={BiYouTube} alt='Twitter' />
+          <img
+            src={BiYouTube}
+            alt='Twitter'
+            className={classes.socialMediaIcon}
+          />
         </Grid>
       </Grid>
     </Grid>
