@@ -416,7 +416,7 @@ export default function Header(props) {
             divider
             button
             component={Link}
-            to='/about'
+            to='/about_me'
             onClick={() => {
               setOpenDrawer(false);
               props.setSelectedIndex(2);

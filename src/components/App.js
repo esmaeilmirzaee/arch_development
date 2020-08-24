@@ -33,7 +33,7 @@ function App() {
             component={() => <>Backend_development </>}
           />
           <Route exact path='/training' component={() => <>Training</>} />
-          <Route exact path='/about' component={() => <>About</>} />
+          <Route exact path='/about_me' component={() => <>About</>} />
           <Route exact path='/hire_me' component={() => <>Hire ME</>} />
           <Route exact path='/' component={() => <>Home</>} />
         </Switch>
