@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core/';
 import { FaHandHoldingHeart } from 'react-icons/fa';
-import bootstrap from '../assets/img/logos/bxl-bootstrap.svg';
+// import bootstrap from '../assets/img/logos/bxl-bootstrap.svg';
 import css from '../assets/img/logos/css3.svg';
 import figma from '../assets/img/logos/figma.svg';
 import git from '../assets/img/logos/git.svg';
@@ -36,7 +36,7 @@ export default function LandingPage() {
             </Typography>
           </Grid>
         </Grid>
-        <Grid container direction='row' justify='center' lg>
+        <Grid container direction='row' justify='center' spacing={1} lg>
           <Grid item>
             <img src={java} alt='bootstrap' />
           </Grid>
@@ -75,9 +75,6 @@ export default function LandingPage() {
           </Grid>
           <Grid item>
             <img src={redux} alt='bootstrap' />
-          </Grid>
-          <Grid item>
-            <img src={bootstrap} alt='bootstrap' />
           </Grid>
           <Grid item>
             <img src={docker} alt='bootstrap' />
