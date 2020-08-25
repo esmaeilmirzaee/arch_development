@@ -3,6 +3,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import theme from './ui/Theme';
 import Header from './ui/Header';
 import Footer from './ui/Footer';
+import LandingPage from './LandingPage';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
@@ -37,6 +38,7 @@ function App() {
           <Route exact path='/hire_me' component={() => <>Hire ME</>} />
           <Route exact path='/' component={() => <>Home</>} />
         </Switch>
+        <LandingPage />
         <Footer
           value={value}
           setValue={setValue}
