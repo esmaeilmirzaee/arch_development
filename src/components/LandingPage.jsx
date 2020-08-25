@@ -36,7 +36,7 @@ export default function LandingPage() {
             </Typography>
           </Grid>
         </Grid>
-        <Grid container direction='row' justify='center' spacing={1} lg>
+        <Grid container direction='row' justify='center' spacing={2} lg>
           <Grid item>
             <img src={java} alt='bootstrap' />
           </Grid>
