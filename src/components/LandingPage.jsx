@@ -6,14 +6,18 @@ export default function LandingPage() {
   return (
     <Grid container direction='column' lg>
       <Grid item>
-        <Typography variant='h1'>
-          Develop and program frontend and backend.
-        </Typography>
-        <Typography>
-          <span>
-            And give <FaHandHoldingHeart /> to software applications.
-          </span>
-        </Typography>
+        <Grid container direction='column' alignItems='center' md>
+          <Grid item md={6}>
+            <Typography variant='h3'>Frontend & Backend</Typography>
+          </Grid>
+          <Grid item md={6}>
+            <Typography>
+              <span>
+                And give <FaHandHoldingHeart /> to software applications.
+              </span>
+            </Typography>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
