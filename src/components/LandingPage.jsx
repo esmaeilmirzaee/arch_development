@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core/';
 import { FaHandHoldingHeart } from 'react-icons/fa';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 // import bootstrap from '../assets/img/logos/bxl-bootstrap.svg';
 import css from '../assets/img/logos/css3.svg';
 import figma from '../assets/img/logos/figma.svg';
@@ -20,7 +20,6 @@ import java from '../assets/img/logos/java.svg';
 import jetbrains from '../assets/img/logos/jetbrains.svg';
 import mongodb from '../assets/img/logos/mongodb.svg';
 import postgres from '../assets/img/logos/postgresql.svg';
-import classes from '*.module.css';
 
 const useStyle = makeStyles((theme) => ({
   logo: {
