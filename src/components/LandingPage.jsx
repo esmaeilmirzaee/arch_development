@@ -18,7 +18,7 @@ import golang from '../assets/img/logos/golang.svg';
 import java from '../assets/img/logos/java.svg';
 import jetbrains from '../assets/img/logos/jetbrains.svg';
 import mongodb from '../assets/img/logos/mongodb.svg';
-import postgres from '../assets/img/logos/postgres.svg';
+import postgres from '../assets/img/logos/postgresql.svg';
 
 export default function LandingPage() {
   return (
