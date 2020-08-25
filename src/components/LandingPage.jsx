@@ -1,6 +1,7 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core/';
 import { FaHandHoldingHeart } from 'react-icons/fa';
+import { makeStyles } from '@material-ui/core';
 // import bootstrap from '../assets/img/logos/bxl-bootstrap.svg';
 import css from '../assets/img/logos/css3.svg';
 import figma from '../assets/img/logos/figma.svg';
@@ -19,8 +20,17 @@ import java from '../assets/img/logos/java.svg';
 import jetbrains from '../assets/img/logos/jetbrains.svg';
 import mongodb from '../assets/img/logos/mongodb.svg';
 import postgres from '../assets/img/logos/postgresql.svg';
+import classes from '*.module.css';
+
+const useStyle = makeStyles((theme) => ({
+  logo: {
+    width: '5rem',
+  },
+}));
 
 export default function LandingPage() {
+  const classes = useStyle();
+
   return (
     <Grid container direction='column' lg>
       <Grid item>
@@ -38,52 +48,52 @@ export default function LandingPage() {
         </Grid>
         <Grid container direction='row' justify='center' spacing={2} lg>
           <Grid item>
-            <img src={java} alt='bootstrap' />
+            <img className={classes.logo} src={java} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={spring} alt='bootstrap' />
+            <img className={classes.logo} src={spring} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={elastic} alt='bootstrap' />
+            <img className={classes.logo} src={elastic} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={rust} alt='bootstrap' />
+            <img className={classes.logo} src={rust} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={golang} alt='bootstrap' />
+            <img className={classes.logo} src={golang} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={postgres} alt='bootstrap' />
+            <img className={classes.logo} src={postgres} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={mongodb} alt='bootstrap' />
+            <img className={classes.logo} src={mongodb} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={html} alt='bootstrap' />
+            <img className={classes.logo} src={html} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={css} alt='bootstrap' />
+            <img className={classes.logo} src={css} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={sass} alt='bootstrap' />
+            <img className={classes.logo} src={sass} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={javascript} alt='bootstrap' />
+            <img className={classes.logo} src={javascript} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={react} alt='bootstrap' />
+            <img className={classes.logo} src={react} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={redux} alt='bootstrap' />
+            <img className={classes.logo} src={redux} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={docker} alt='bootstrap' />
+            <img className={classes.logo} src={docker} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={git} alt='bootstrap' />
+            <img className={classes.logo} src={git} alt='bootstrap' />
           </Grid>
           <Grid item>
-            <img src={figma} alt='bootstrap' />
+            <img className={classes.logo} src={figma} alt='bootstrap' />
           </Grid>
         </Grid>
       </Grid>
